@@ -10,27 +10,61 @@
  */
 
 ?>
+      </div>
 
-	</div><!-- #content -->
+<!-- page navigation -->
+<nav aria-label="...">
+  <ul class="pagination">
+	<li class="page-item disabled">
+	  <a class="page-link" href="#" tabindex="-1">Previous</a>
+	</li>
+	<li class="page-item"><a class="page-link" href="#">1</a></li>
+	<li class="page-item active">
+	  <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+	</li>
+	<li class="page-item"><a class="page-link" href="#">3</a></li>
+	<li class="page-item"><a class="page-link" href="#">4</a></li>
+	<li class="page-item"><a class="page-link" href="#">5</a></li>
+	<li class="page-item">
+	  <a class="page-link" href="#">Next</a>
+	</li>
+  </ul>
+</nav>
+<!-- end page navigation -->
+</div>
+<!-- container -->
+</section>
+<!-- end main-content -->
+<!-- footer -->
+<footer>
+<div class="footer-bottom">
+<div class="container">
+  <div class="row">
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'fenchi' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'fenchi' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'fenchi' ), 'fenchi', '<a href="http://fenchgroup.site">FenchiGroup</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
 
+	<div class="col-md-6 copyRight">
+	  <p> &copy; Copyright 2019 - FenchiGroup. All rights reserved.</p>
+	</div>
+	<div class="col-md-6 goTop">
+	  <a href="#" id="backTop" style="display: none;"><i class="far fa-arrow-alt-circle-up"></i></a>
+	  <ul class="footerSocial">
+
+		<li><a href="#" data-toggle="tooltip" title="Facebook"><i class="fab fa-facebook-square"></i></a></li>
+		<li><a href="#" data-toggle="tooltip" title="Twitter"><i class="fab fa-twitter-square"></i></a></li>
+		<li><a href="#" data-toggle="tooltip" title="Linkedin"><i class="fab fa-linkedin"></i></a></li>
+		<li><a href="#" data-toggle="tooltip" title="Google+"><i class="fab fa-google-plus-square"></i></a></li>
+	  </ul>
+	</div>
+	<!--Footer Bottom-->
+
+
+  </div>
+</div>
+</div>
+
+</footer>
+<!-- end footer -->
 <?php wp_footer(); ?>
-
 </body>
+
 </html>
