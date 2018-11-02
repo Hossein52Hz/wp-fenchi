@@ -131,9 +131,9 @@ function fenchi_scripts() {
 
 	// Styles 
 	wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/layouts/bootstrap.min.css',array(),'4.1.1' );
-	wp_enqueue_style( 'lightgreen-css', get_template_directory_uri() . '/layouts/color/lightgreen.css',array(),'1.0.0' );
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/layouts/font-awesome/css/all.min.css', array(), '5.1' );
 	wp_enqueue_style( 'fenchi-style', get_stylesheet_uri(), array() );
+	wp_enqueue_style( 'lightgreen-css', get_template_directory_uri() . '/layouts/color/lightgreen.css',array(),'1.0.0' );
 	
 	// Scripts
 	wp_enqueue_script( 'jquery-js' , get_template_directory_uri() . '/js/jquery-3.3.1.min.js', array(), '3.3.1', true );
