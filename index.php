@@ -15,8 +15,10 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+
+      <div class="row">
+        <!-- content -->
+        <div class="col-md-8 allposts">
 
 		<?php
 		if ( have_posts() ) :
@@ -40,9 +42,35 @@ get_header();
 				 */
 				get_template_part( 'template-parts/content', get_post_type() );
 
-			endwhile;
+			endwhile;?>
 
-			the_posts_navigation();
+	        
+
+			
+			
+
+			<!-- page navigation -->
+			<nav aria-label="...">
+			  <ul class="pagination">
+				<li class="page-item disabled">
+				  <a class="page-link" href="#" tabindex="-1">Previous</a>
+				</li>
+				<li class="page-item"><a class="page-link" href="#">1</a></li>
+				<li class="page-item active">
+				  <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="page-item"><a class="page-link" href="#">3</a></li>
+				<li class="page-item"><a class="page-link" href="#">4</a></li>
+				<li class="page-item"><a class="page-link" href="#">5</a></li>
+				<li class="page-item">
+				  <a class="page-link" href="#">Next</a>
+				</li>
+			  </ul>
+			</nav>
+			<!-- end page navigation -->
+			</div>
+			<?php
+			//the_posts_navigation();
 
 		else :
 
@@ -51,8 +79,6 @@ get_header();
 		endif;
 		?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
 
 <?php
 get_sidebar();
