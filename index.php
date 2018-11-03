@@ -16,7 +16,7 @@ get_header();
 ?>
 
 
-      <div class="row">
+     
         <!-- content -->
         <div class="col-md-8 allposts">
 
@@ -44,13 +44,8 @@ get_header();
 
 			endwhile;?>
 
-	        
-
-			
-			
-
-			<!-- page navigation -->
-			<nav aria-label="...">
+	         <!-- page navigation -->
+    	<nav>
 			  <ul class="pagination">
 				<li class="page-item disabled">
 				  <a class="page-link" href="#" tabindex="-1">Previous</a>
@@ -68,9 +63,11 @@ get_header();
 			  </ul>
 			</nav>
 			<!-- end page navigation -->
-			</div>
+
+			
+			
+
 			<?php
-			//the_posts_navigation();
 
 		else :
 
@@ -79,7 +76,7 @@ get_header();
 		endif;
 		?>
 
-
+		</div>
 <?php
 get_sidebar();
 get_footer();
