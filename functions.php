@@ -7,6 +7,36 @@
  * @package fenchi
  */
 
+
+if ( ! function_exists( 'fenchi_getPostViews' ) ) :
+function fenchi_getPostViews($postID) {
+    $count_key = 'post_views_count';
+    $count = get_post_meta($postID, $count_key, true);
+    if ($count == '') {
+        delete_post_meta($postID, $count_key);
+        add_post_meta($postID, $count_key, '0');
+        return "0 views";
+    }
+    return $count.' views';
+}
+endif;
+if ( ! function_exists( 'fenchi_setPostViews' ) ) :
+
+function fenchi_setPostViews($postID) {
+    $count_key = 'post_views_count';
+    $count = get_post_meta($postID, $count_key, true);
+    if ($count == '') {
+        $count = 0;
+        delete_post_meta($postID, $count_key);
+        add_post_meta($postID, $count_key, '0');
+    } else {
+        $count++;
+        update_post_meta($postID, $count_key, $count);
+    }
+}
+remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0);
+endif;
+
 if ( ! function_exists( 'fenchi_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.

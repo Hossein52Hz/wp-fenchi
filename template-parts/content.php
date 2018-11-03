@@ -12,10 +12,14 @@
 
 <!-- post type1 -->
 <div class="card mb-4 shadow-sm">
-
-  <div class="category">
+  <?php if(!has_post_thumbnail()){
+    echo '<div class="category noThumbnail">';
+  } 
+  else echo '<div class="category">'; ?>
+  
     <?php fenchi_post_thumbnail(); ?>
     <!-- <img class="thumbnail" src="layout/img/pixabay/lightgreen/g3.jpg" alt=""> -->
+    <?php if(has_category()): ?>
     <div class="catList">
       <ul>
         <li><a href="#"><i class="fas fa-layer-group"></i></a></li>
@@ -25,6 +29,7 @@
         <li><a href="#"> sport </a></li> -->
       </ul>
     </div>
+    <?php endif;?>
   </div>
   <div class="card-body">
     <div class="social">
@@ -64,9 +69,10 @@
     <?php if(is_single()): ?>
 
     <div class="count">
+      <?php fenchi_setPostViews(get_the_ID()); ?>
       <ul>
         <li><i class="fas fa-comments"></i><a href="#"> <?php  echo $number = get_comments_number(); ?></a> </li>
-        <li><i class="fas fa-eye"></i><a href="#"> 121 views</a> </li>
+        <li><i class="fas fa-eye"></i><a href="#"> <?php echo fenchi_getPostViews(get_the_ID()); ?></a> </li>
       </ul>
 
     </div>
