@@ -40,24 +40,29 @@
     </div>
     <div class="clear">
 
-      <div class="postDetailsTypeOne">
+      <div class="postDetails">
         <a href="<?php the_permalink(); ?>">
           <h2 class="postTitle"><?php the_title(); ?></h2>
         </a>
         <a href="#"><span class="publishDate textCenter"><?php the_time( get_option( 'date_format' ) ); ?> </span></a>
       </div>
-      <div class="postContentTypeOne">
+      <div class="postContent">
        <?php
         if(is_single()){
           the_content();
         }
         else{ 
           the_excerpt();
+          ?>
+          <a href="<?php the_permalink(); ?>"><small class="readMore">Read more...</small></a>
+          <?php
         } 
         ?>
 
       </div>
     </div>
+    <?php if(is_single()): ?>
+
     <div class="count">
       <ul>
         <li><i class="fas fa-comments"></i><a href="#"> <?php  echo $number = get_comments_number(); ?></a> </li>
@@ -72,7 +77,7 @@
         <?php the_tags(' ' , ' ،', ' ')  ?>
       </ul>
     </div>
-
+      <?php endif; ?>
   </div>
 </div>
 <!-- end post type 1 -->
