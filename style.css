@@ -193,6 +193,7 @@ a:hover {
 .postDetails {
     width: 30%;
     float: left;
+    margin-right:25px;
 }
 
 .postDetails .postTitle {
@@ -210,8 +211,8 @@ a:hover {
 }
 
 .postContent {
-    width: 70%;
-    float: right;
+    /* width: 70%;
+    float: right; */
 }
 
 .postContent p {
@@ -609,7 +610,7 @@ a:hover {
 .singlePost .publishDate {
     float: none;
     display: block;
-
+    text-align: right;
 }
 
 .singlePost img, .category img {
