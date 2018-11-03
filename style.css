@@ -163,6 +163,11 @@ a:hover {
 
 .category{
     position: relative;
+    /* margin-bottom: 40px; */
+}
+.noThumbnail{
+    
+    margin-bottom: 40px;
 }
 .catList{
     position: absolute;
@@ -614,7 +619,7 @@ a:hover {
 }
 
 .singlePost img, .category img {
-    max-width: 100%;
+    /* width: 100%; */
     margin: 0 auto;
     display: block;
     /* padding-left: 25px; */
@@ -625,7 +630,9 @@ a:hover {
 .thumbnail {
     border-radius: .25rem .25rem 0 0;
 }
-
+.post-thumbnail img{
+    width: 100%;
+}
 .tags ul{
     margin-left: 0;
     padding-left: 25px;
