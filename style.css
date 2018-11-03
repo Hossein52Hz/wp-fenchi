@@ -177,7 +177,7 @@ a:hover {
     display: inline;
     list-style: none;
 }
-.catList ul li a{
+.catList ul, .catList ul a{
     color: #fff;
 }
 .catList ul li i{
@@ -612,12 +612,13 @@ a:hover {
 
 }
 
-.singlePost img {
+.singlePost img, .category img {
     max-width: 100%;
     margin: 0 auto;
     display: block;
     /* padding-left: 25px; */
     padding-bottom: 10px;
+    height: auto;
 }
 
 .thumbnail {
