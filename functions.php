@@ -8,6 +8,7 @@
  */
 
 
+
 if ( ! function_exists( 'fenchi_getPostViews' ) ) :
 function fenchi_getPostViews($postID) {
     $count_key = 'post_views_count';
@@ -74,7 +75,7 @@ if ( ! function_exists( 'fenchi_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'fenchi' ),
+			'primary' => esc_html__( 'primary', 'fenchi' ),
 		) );
 
 		/*
@@ -173,6 +174,12 @@ function fenchi_scripts() {
 
 }
 add_action( 'wp_enqueue_scripts', 'fenchi_scripts' );
+
+
+/**
+ *  Register Custom Navigation Walker
+ */
+require_once get_template_directory() . '/inc/wp-bootstrap-navwalker.php';
 
 /**
  * Implement the Custom Header feature.

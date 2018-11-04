@@ -63,7 +63,22 @@
             <!-- <span class="navbar-toggler-icon"></span> -->
             <span id="" class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+
+         
+        <?php
+                wp_nav_menu(array(
+                'theme_location'    => 'primary',
+                'container'       => 'div',
+                'container_id'    => 'main-nav',
+                'container_class' => 'collapse navbar-collapse justify-content-end',
+                'menu_id'         => false,
+                'menu_class'      => 'navbar-nav',
+                'depth'           => 3,
+                'fallback_cb'     => 'wp_bootstrap_navwalker::fallback',
+                'walker'          => new wp_bootstrap_navwalker()
+                ));
+          ?>
+          <!-- <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <ul class="navbar-nav">
               <li class="nav-item active dropdown">
                 <a class="nav-link dropdown-toggle" href="index.html" id="navbarDropdownMenuLink" role="button"
@@ -96,7 +111,7 @@
                 <a class="nav-link" href="#">About me</a>
               </li>
             </ul>
-          </div>
+          </div> -->
         </nav>
         <!-- end main navbar -->
 
