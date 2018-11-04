@@ -78,40 +78,7 @@
                 'walker'          => new wp_bootstrap_navwalker()
                 ));
           ?>
-          <!-- <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <ul class="navbar-nav">
-              <li class="nav-item active dropdown">
-                <a class="nav-link dropdown-toggle" href="index.html" id="navbarDropdownMenuLink" role="button"
-                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="index.html">Home 1</a>
-                  <a class="dropdown-item" href="index2.html">Home 2</a>
-                  <a class="dropdown-item" href="index3.html">Home 3</a>
-                  <a class="dropdown-item" href="index4.html">Home 4</a>
-                </div>
-              </li>
-              <li class="nav-item active dropdown">
-                <a class="nav-link dropdown-toggle" href="index.html" id="navbarDropdownMenuLink" role="button"
-                  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Archive</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="archive.html">Archive 1</a>
-                  <a class="dropdown-item" href="archive2.html">Archive 2</a>
-                  <a class="dropdown-item" href="archive3.html">Archive 3</a>
-                  <a class="dropdown-item" href="archive4.html">Archive 4</a>
-                  <a class="dropdown-item" href="archive5.html">Archive 5</a>
-                </div>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="full-width.html">Page</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="post.html">Single Post</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">About me</a>
-              </li>
-            </ul>
-          </div> -->
+      
         </nav>
         <!-- end main navbar -->
 
