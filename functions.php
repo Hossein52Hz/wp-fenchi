@@ -180,6 +180,11 @@ add_action( 'wp_enqueue_scripts', 'fenchi_scripts' );
 require get_template_directory() . '/inc/custom-header.php';
 
 /**
+ * Implement the Custom bootstrap pagination.
+ */
+require get_template_directory() . '/inc/wp-bootstrap4.1-pagination.php';
+
+/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
