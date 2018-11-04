@@ -11,7 +11,7 @@
 
 
 <!-- post type1 -->
-<div class="card mb-4 shadow-sm">
+<div class="card mb-4 shadow-sm" id="post-<?php the_ID(); ?>">
   <?php if(!has_post_thumbnail()){
     echo '<div class="category noThumbnail">';
   } 

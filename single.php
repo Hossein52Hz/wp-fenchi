@@ -41,14 +41,7 @@ get_header();
                 <p>I want to tell you something. The world will not messy when you spend your time for other things
                   instead doing “coding”. You are not the only programmer in this world.</p>
               </div>
-              <div class="liks">
-                <a href="#" class="btn btn-default liksItem">
-                  <i class="fa fa-thumbs-up "></i>2
-                </a>
-                <a href="#" class="btn btn-default liksItem">
-                  <i class="fa fa-thumbs-down "></i>12
-                </a>
-              </div>
+             
             </div>
             <!-- comment -->
             <div class="commentBody respons">
@@ -63,14 +56,7 @@ get_header();
                 <p>I want to tell you something. The world will not messy when you spend your time for other things
                   instead doing “coding”. You are not the only programmer in this world.</p>
               </div>
-              <div class="liks">
-                <a href="#" class="btn btn-default liksItem">
-                  <i class="fa fa-thumbs-up "></i>2
-                </a>
-                <a href="#" class="btn btn-default liksItem">
-                  <i class="fa fa-thumbs-down "></i>12
-                </a>
-              </div>
+             
             </div>
             <!-- comment -->
             <div class="commentBody">
@@ -85,14 +71,7 @@ get_header();
                 <p>I want to tell you something. The world will not messy when you spend your time for other things
                   instead doing “coding”. You are not the only programmer in this world.</p>
               </div>
-              <div class="liks">
-                <a href="#" class="btn btn-default liksItem">
-                  <i class="fa fa-thumbs-up "></i>2
-                </a>
-                <a href="#" class="btn btn-default liksItem">
-                  <i class="fa fa-thumbs-down "></i>12
-                </a>
-              </div>
+              
             </div>
             <!-- comment -->
             <div class="commentBody respons">
@@ -107,14 +86,7 @@ get_header();
                 <p>I want to tell you something. The world will not messy when you spend your time for other things
                   instead doing “coding”. You are not the only programmer in this world.</p>
               </div>
-              <div class="liks">
-                <a href="#" class="btn btn-default liksItem">
-                  <i class="fa fa-thumbs-up "></i>2
-                </a>
-                <a href="#" class="btn btn-default liksItem">
-                  <i class="fa fa-thumbs-down "></i>12
-                </a>
-              </div>
+             
             </div>
             <!-- comment -->
             <div class="commentBody respons">
@@ -129,14 +101,7 @@ get_header();
                 <p>I want to tell you something. The world will not messy when you spend your time for other things
                   instead doing “coding”. You are not the only programmer in this world.</p>
               </div>
-              <div class="liks">
-                <a href="#" class="btn btn-default liksItem">
-                  <i class="fa fa-thumbs-up "></i>2
-                </a>
-                <a href="#" class="btn btn-default liksItem">
-                  <i class="fa fa-thumbs-down "></i>12
-                </a>
-              </div>
+              
             </div>
             <!-- comment -->
             <div class="commentBody">
@@ -151,14 +116,7 @@ get_header();
                 <p>I want to tell you something. The world will not messy when you spend your time for other things
                   instead doing “coding”. You are not the only programmer in this world.</p>
               </div>
-              <div class="liks">
-                <a href="#" class="btn btn-default liksItem">
-                  <i class="fa fa-thumbs-up "></i>2
-                </a>
-                <a href="#" class="btn btn-default liksItem">
-                  <i class="fa fa-thumbs-down "></i>12
-                </a>
-              </div>
+              
             </div>
 
           </div>
@@ -200,7 +158,7 @@ get_header();
 
           </div>
           <!-- end comment form -->
-        </div>		
+    </div>		
 
 		
 		<?php
