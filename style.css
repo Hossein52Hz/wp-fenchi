@@ -219,7 +219,9 @@ a:hover {
     /* width: 70%;
     float: right; */
 }
-
+.postContent img{
+    max-width: 100%;
+}
 .postContent p {
     text-align: justify;
     padding-left: 25px;
