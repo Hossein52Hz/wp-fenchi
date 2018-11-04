@@ -370,9 +370,13 @@ a:hover {
     width: 48px;
     float: left;
 }
+
 .comment-content{
     display: block;
     clear: both;
+}
+.comment-content img{
+    max-width: 100%;
 }
 .comment-metadata{
     float: right;
