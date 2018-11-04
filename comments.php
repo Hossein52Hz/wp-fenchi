@@ -20,7 +20,7 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div id="comments" class="comments-area">
+<div id="comments" class="commentList card mb-4 shadow-sm ">
 
 	<?php
 	// You can start editing here -- including this comment!
@@ -49,12 +49,14 @@ if ( post_password_required() ) {
 		<?php the_comments_navigation(); ?>
 
 		<ol class="comment-list">
+		
 			<?php
 			wp_list_comments( array(
 				'style'      => 'ol',
 				'short_ping' => true,
 			) );
 			?>
+		
 		</ol><!-- .comment-list -->
 
 		<?php
@@ -67,9 +69,15 @@ if ( post_password_required() ) {
 			<?php
 		endif;
 
-	endif; // Check for have_comments().
+	endif; // Check for have_comments(). ?>
 
+	<div class="card mb-4 shadow-sm commentForm">
+        <div class="card-body">
+
+	<?php
 	comment_form();
 	?>
+	</div>
+	</div>
 
 </div><!-- #comments -->

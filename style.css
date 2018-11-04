@@ -298,6 +298,8 @@ a:hover {
 
 
 /* comment */
+
+
 .cmtBtn {
     border: 1px solid rgba(0, 0, 0, .125);
     background-color: #ffffff;
@@ -329,12 +331,51 @@ a:hover {
     padding-left: 10px;
 }
 
-.commentBody {
+.comment-body {
     border: 1px solid #ddd;
     padding: 16px;
     background: #fff;
     border-radius: 4px;
     margin-bottom: 20px;
+
+}
+.comments-title{
+    font-size: 18px;
+    padding: 20px;
+    font-weight: bold;
+}
+.comment-reply-title, .comment-notes{
+    font-size: 18px;
+    
+    font-weight: bold;
+}
+.comment-list{
+    padding: 24px;
+}
+.commentForm{
+    margin: 24px;
+}
+.comment-meta{
+    margin-top: 0%;
+    box-shadow: none !important;
+    padding: 0%;
+    background: none;
+}
+
+.comment-author{
+    float: left;
+}
+.comment-author img{
+    margin: 0 5px !important;
+    width: 48px;
+    float: left;
+}
+.comment-content{
+    display: block;
+    clear: both;
+}
+.comment-metadata{
+    float: right;
 }
 
 .commentBody.respons {
