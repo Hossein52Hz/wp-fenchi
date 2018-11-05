@@ -23,7 +23,7 @@
   <link href="https://fonts.googleapis.com/css?family=Alegreya+SC:400&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 
 
-  <title><?php echo esc_url( home_url( '/' )); ?></title>
+  <title><?php wp_title(); ?></title>
   <?php wp_head(); ?>
 </head>
 

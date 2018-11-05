@@ -9,9 +9,10 @@
 
 ?>
 
+<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 <!-- post type1 -->
-<div class="card mb-4 shadow-sm" id="post-<?php the_ID(); ?>">
+<div class="card mb-4 shadow-sm" >
   <?php if(!has_post_thumbnail()){
     echo '<div class="category noThumbnail">';
   } 
@@ -85,7 +86,7 @@
 </div>
 <!-- end post type 1 -->
 
-
+</div>
 
 <?php
 			//the_posts_navigation();
