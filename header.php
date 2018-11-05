@@ -58,44 +58,34 @@
         <!-- main navbar -->
 
         <nav class="navbar navbar-expand-lg">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <!-- <span class="navbar-toggler-icon"></span> -->
+            <!-- <a  href="#">LinuxMotto</a> -->
+       
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span id="" class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
           </button>
 
-        <?php
-		      wp_nav_menu( array(
-		      	'theme_location'    => 'primary',
-		      	'depth'             => 3,
-		      	'container'         => 'div',
-		      	'container_class'   => 'collapse navbar-collapse',
-		      	'container_id'      => 'navbarNavAltMarkup',
-		      	'menu_class'        => 'nav navbar-nav',
-		      	'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
-		      	'walker'            => new WP_Bootstrap_Navwalker(),
-		      ) );
-		?>
          <?php
-                // wp_nav_menu(array(
-                // 'theme_location'    => 'primary',
-                // 'container'       => 'div',
-                // 'container_id'    => 'navbarNavAltMarkup',
-                // 'container_class' => 'collapse navbar-collapse',
-                // 'menu_id'         => 'navbarNavAltMarkup2',
-                // 'menu_class'      => 'navbar-nav ml-auto',
-                // 'depth'           => 3,
-                // 'fallback_cb'     => 'wp_bootstrap_navwalker::fallback',
-                // 'walker'          => new wp_bootstrap_navwalker()
-                // ));
+                wp_nav_menu(array(
+                'theme_location'    => 'primary',
+                'container'       => 'div',
+                'container_id'    => 'navbarResponsive',
+                'container_class' => 'collapse navbar-collapse',
+                'menu_id'         => 'navbarResponsive',
+                'menu_class'      => 'navbar-nav ml-auto',
+                'depth'           => 4,
+                'fallback_cb'     => 'wp_bootstrap_navwalker::fallback',
+                'walker'          => new wp_bootstrap_navwalker()
+                ));
                 ?>
-       
-      
-        </nav>
+
         <!-- end main navbar -->
 
-        <!-- toggle with action-->
-        <button id="ChangeToggle" class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarHeader"
+       
+        </nav>
+       <!-- toggle with action-->
+       <button id="ChangeToggle" class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarHeader"
           aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
           <span id="navbar-hamburger" class="myToggler"><i class="fas fa-bars"></i></span>
           <span id="navbar-close" class="myToggler hidden"><i class="fa fa-times"></i></span>
