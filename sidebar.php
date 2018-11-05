@@ -7,12 +7,14 @@
  * @package fenchi
  */
 ?>
-<!-- sidebar -->
-<div class="col-md-4 sidebar">	  
-		<?php if ( is_active_sidebar( 'main-sidebar' ) ) : ?>
-				<?php dynamic_sidebar( 'main-sidebar' ); ?>
-		<?php endif; ?>
-</div>
-<!-- end sidebar -->
+
+<?php if ( is_active_sidebar( 'main-sidebar' ) ) : ?>
+	<!-- sidebar -->
+	<div class="col-md-4 sidebar">
+		<?php dynamic_sidebar( 'main-sidebar' ); ?>
+
+	</div>
+	<!-- end sidebar -->
+<?php endif; ?>
 
 </div>
