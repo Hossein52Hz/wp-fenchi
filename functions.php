@@ -99,6 +99,12 @@ if ( ! function_exists( 'fenchi_setup' ) ) :
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
+		// 
+		function fenchi_add_editor_styles() {
+			add_editor_style( 'custom-editor-style.css' );
+		}
+		add_action( 'admin_init', 'fenchi_add_editor_styles' );
+
 		/**
 		 * Add support for core custom logo.
 		 *
