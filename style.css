@@ -496,12 +496,7 @@ a:hover {
     margin-left: 0%;
     margin-right: 10px;
 }
-/* .tagcloud a:before{
-    font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f02b";
-    margin-left: 0%;
-    
-    margin-right: 10px;
-} */
+
 .tagcloud a {
     font-size: 13px !important;
     color: #aaa;
