@@ -64,20 +64,32 @@
             <span id="" class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
           </button>
 
-         
         <?php
-                wp_nav_menu(array(
-                'theme_location'    => 'primary',
-                'container'       => 'div',
-                'container_id'    => 'main-nav',
-                'container_class' => 'collapse navbar-collapse justify-content-end',
-                'menu_id'         => false,
-                'menu_class'      => 'navbar-nav',
-                'depth'           => 3,
-                'fallback_cb'     => 'wp_bootstrap_navwalker::fallback',
-                'walker'          => new wp_bootstrap_navwalker()
-                ));
-          ?>
+		      wp_nav_menu( array(
+		      	'theme_location'    => 'primary',
+		      	'depth'             => 3,
+		      	'container'         => 'div',
+		      	'container_class'   => 'collapse navbar-collapse',
+		      	'container_id'      => 'navbarNavAltMarkup',
+		      	'menu_class'        => 'nav navbar-nav',
+		      	'fallback_cb'       => 'WP_Bootstrap_Navwalker::fallback',
+		      	'walker'            => new WP_Bootstrap_Navwalker(),
+		      ) );
+		?>
+         <?php
+                // wp_nav_menu(array(
+                // 'theme_location'    => 'primary',
+                // 'container'       => 'div',
+                // 'container_id'    => 'navbarNavAltMarkup',
+                // 'container_class' => 'collapse navbar-collapse',
+                // 'menu_id'         => 'navbarNavAltMarkup2',
+                // 'menu_class'      => 'navbar-nav ml-auto',
+                // 'depth'           => 3,
+                // 'fallback_cb'     => 'wp_bootstrap_navwalker::fallback',
+                // 'walker'          => new wp_bootstrap_navwalker()
+                // ));
+                ?>
+       
       
         </nav>
         <!-- end main navbar -->
