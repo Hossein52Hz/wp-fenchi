@@ -16,9 +16,13 @@ get_header();
 ?>
 
 
-     
+     <?php if ( is_active_sidebar( 'main-sidebar' ) ) : ?>
         <!-- content -->
         <div class="col-md-8 allposts">
+	<?php else: ?>
+ 		<!-- content full-width -->
+ 		<div class="col-md-12 allposts">
+	<?php endif; ?>
 
 		<?php
 		if ( have_posts() ) :
