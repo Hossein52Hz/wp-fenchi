@@ -18,15 +18,12 @@
   else echo '<div class="category">'; ?>
   
     <?php fenchi_post_thumbnail(); ?>
-    <!-- <img class="thumbnail" src="layout/img/pixabay/lightgreen/g3.jpg" alt=""> -->
+    
     <?php if(has_category()): ?>
     <div class="catList">
       <ul>
         <li><a href="#"><i class="fas fa-layer-group"></i></a></li>
         <?php echo get_the_category_list( __( ', ', 'fenchi' ) );?>
-        <!-- <li><a href="#"> News,</a></li>
-        <li><a href="#"> programming,</a></li>
-        <li><a href="#"> sport </a></li> -->
       </ul>
     </div>
     <?php endif;?>
