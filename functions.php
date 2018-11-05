@@ -137,11 +137,11 @@ add_action( 'after_setup_theme', 'fenchi_content_width', 0 );
 function fenchi_widgets_init() {
 	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'fenchi' ),
-		'id'            => 'sidebar-1',
+		'id'            => 'main-sidebar',
 		'description'   => esc_html__( 'Add widgets here.', 'fenchi' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
+		'before_widget' => '<section id="%1$s" class="widget %2$s card my-4 shadow-sm"><div class="card-body">',
+		'after_widget'  => '</div></section>',
+		'before_title'  => '<h2 class="widget-title widgetTitle">',
 		'after_title'   => '</h2>',
 	) );
 }
