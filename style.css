@@ -469,11 +469,11 @@ a:hover {
     margin-bottom: 16px;
 }
 
-.groupItem {
+
+.widget ul{
     padding-left: 0%;
 }
-
-.groupItem li {
+.cat-item, .page_item, .widget_archive ul li, .widget_recent_entries ul li, .widget_meta ul li, .widget_nav_menu .menu-item, .widget_recent_comments ul li {
     list-style: none;
     padding-bottom: 7px;
     margin-bottom: 10px;
@@ -481,55 +481,125 @@ a:hover {
     color: #aaaaaa;
     text-transform: capitalize;
 }
-
-.groupItem li i {
-
+.cat-item a:before, .page_item a:before, .widget_recent_entries ul li a:before, .widget_nav_menu .menu-item a:before, .widget_recent_comments ul li span:before{
+    font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f0da";
     margin-left: 0%;
     margin-right: 10px;
 }
-
-.groupItem li a {
-    font-size: 13px;
-    color: #aaaaaa;
+.widget_meta ul li a:before{
+    font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f0c1";
+    margin-left: 0%;
+    margin-right: 10px;
 }
-
-.groupItem li a:hover {
-    color: #007bff;
-    text-decoration: none;
+.widget_archive ul li a:before{
+    font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f039";
+    margin-left: 0%;
+    margin-right: 10px;
 }
-
-.tagItem {
-    padding-left: 0%;
-    color: #aaaaaa;
-}
-
-.tagItem li a {
-    color: #aaaaaa;
-}
-
-.tagItem li:hover {
-    border: 1px solid #007bff;
-    transition: all 0.2s ease-in-out;
-}
-
-.tagItem li a:hover {
-    color: #007bff;
-    text-decoration: none;
-}
-
-.tagItem li {
-    list-style: none;
+/* .tagcloud a:before{
+    font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f02b";
+    margin-left: 0%;
+    
+    margin-right: 10px;
+} */
+.tagcloud a {
+    font-size: 13px !important;
+    color: #aaa;
+    padding: 4px 10px;
     display: inline-block;
-    margin: 5px;
-    padding: 5px 12px;
-    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
-    background-color: #fff;
-    background-clip: border-box;
-    border: 1px solid rgba(0, 0, 0, .125);
-    font-size: 13px;
-    /* border-radius: .25rem; */
-
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+    margin: 7px 7px;
+    border-radius: 2px;
 }
+.widget_recent_comments ul li{
+    color: #41d6c3;
+    font-size: 13px;
+}
+.tagcloud a:hover{
+    border: 1px solid #ff4a14;
+    text-decoration: none;
+}
+.cat-item a, .page_item a, .widget_archive a, .widget_recent_entries ul li a, .widget_recent_comments ul li a, .widget_meta ul li a, .widget_recent_entries ul li span, .widget_nav_menu .menu-item a{
+    font-size: 13px;
+    color: #aaaaaa;
+}
+.cat-item a:hover, .widget_recent_entries ul li a:hover, .widget_meta ul li a:hover,  .widget_nav_menu .menu-item a:hover, .widget_recent_comments ul li a:hover {
+    color: #ff4a14;
+    text-decoration: none;
+}
+.widget .children{
+    padding-left: 16px;
+}
+.widget .children li{
+    display: table-footer-group;
+}
+
+.widget_categories .screen-reader-text{
+    padding-right: 4px;
+    display: none;
+}
+.widget_categories #cat{
+    height: calc(2.875rem + 2px);
+    padding-top: .375rem;
+    padding-bottom: .375rem;
+    display: inline-block;
+    width: 100%;
+    padding: .375rem 1.75rem .375rem .75rem;
+    line-height: 1.5;
+    color: #495057;
+    vertical-align: middle;
+    background: #fff;
+    background-size: 8px 10px;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    appearance: none;
+    transition: background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.widget_media_image img{
+    max-width: 100%;
+    border: 1px solid #ddd;
+    padding: 2px;
+}
+.widget_media_gallery figure{
+    display: inline-block;
+}
+.widget_media_gallery img{
+    border: 1px solid #ddd;
+    padding: 2px;
+    margin: 2px;
+}
+.widget_text img{
+    max-width: 100%;
+    height: auto;
+}
+/* calendar */
+#wp-calendar{
+    width: 100%;
+}
+
+#wp-calendar caption{
+    background: #41d6c3;
+    text-align: center;
+    width: 100%;
+    color: #fff;
+}
+#wp-calendar th{
+    border: 1px solid #ddd;
+    text-align: center;
+    background: #41d6c3;
+    color: #fff;
+}
+#wp-calendar tr, #wp-calendar td{
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 4px;
+}
+#wp-calendar .pad{
+    background: #f0f0f0;
+}
+
+/* calendar */
 
 /* about me */
 .lineLeft {
