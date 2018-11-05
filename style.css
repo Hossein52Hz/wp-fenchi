@@ -241,9 +241,8 @@ a:hover {
 }
 .postContent p {
     text-align: justify;
-    padding-left: 25px;
-
-
+    padding-left: 12px;
+    padding-right: 12px;
 }
 
 .postContent .readMore {
@@ -312,7 +311,19 @@ a:hover {
 
 /* end home content */
 
-
+/* 404 page */
+.not-found {
+    text-align: center;
+    padding-bottom: 40px;
+}
+.not-found .card-body{
+    padding-bottom: 50px;
+}
+.not-found form {
+    max-width: 50%;
+    margin: 0 auto;
+}
+/* end 404 page */
 
 /* comment */
 
