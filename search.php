@@ -10,20 +10,29 @@
 get_header();
 ?>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main">
+	     <?php if ( is_active_sidebar( 'main-sidebar' ) ) : ?>
+        <!-- content -->
+	        <div class="col-md-8 allposts">
+				<div class="row archive">
+		<?php else: ?>
+	 		<!-- content full-width -->
+	 		<div class="col-md-12 allposts">
+			 <div class="row archive">
+		<?php endif; ?>
+
 
 		<?php if ( have_posts() ) : ?>
-
-			<header class="page-header">
+			<div class="col-md-12">
+			<header class="page-header card mb-4 shadow-sm">
 				<h1 class="page-title">
+				<i class="fas fa-search"></i>
 					<?php
 					/* translators: %s: search query. */
 					printf( esc_html__( 'Search Results for: %s', 'fenchi' ), '<span>' . get_search_query() . '</span>' );
 					?>
 				</h1>
 			</header><!-- .page-header -->
-
+			</div>
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) :
@@ -36,9 +45,11 @@ get_header();
 				 */
 				get_template_part( 'template-parts/content', 'search' );
 
-			endwhile;
-
-			the_posts_navigation();
+			endwhile;?>
+			</div><!-- row -->
+			<?php
+			//  page navigation
+			echo bootstrap_pagination(); 
 
 		else :
 
@@ -47,8 +58,7 @@ get_header();
 		endif;
 		?>
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
+		</div>
 
 <?php
 get_sidebar();

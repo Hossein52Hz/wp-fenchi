@@ -9,27 +9,85 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+		
+<div class="col-md-6">
+<!-- post type1 -->
+<div class="card mb-4 shadow-sm" id="post-<?php the_ID(); ?>">
+  <?php if(!has_post_thumbnail()){
+    echo '<div class="category noThumbnail">';
+  } 
+  else echo '<div class="category">'; ?>
+  
+    <?php fenchi_post_thumbnail(); ?>
+    
+    <?php if(has_category()): ?>
+    <div class="catList">
+      <ul>
+        <li><a href="#"><i class="fas fa-layer-group"></i></a></li>
+        <?php echo get_the_category_list( __( ', ', 'fenchi' ) );?>
+      </ul>
+    </div>
+    <?php endif;?>
+  </div>
+  <div class="card-body">
+    <div class="social">
+      <h4 class="author"><span><a href="#"> <?php fenchi_posted_by(); ?> </a></span></h4>
+      <h4 class="shareLink"><span>
+          <a href="#" data-toggle="tooltip" title="Share on Facebook"><i class="fab fa-facebook-square"></i></a>
+          <a href="#" data-toggle="tooltip" title="Share on Twitter"><i class="fab fa-twitter-square"></i></a>
+          <a href="#" data-toggle="tooltip" title="Share on Linkedin"><i class="fab fa-linkedin"></i></a>
+          <a href="#" data-toggle="tooltip" title="Share on Google+"><i class="fab fa-google-plus-square"></i></a>
+          <a href="#" data-toggle="tooltip" title="Share on Pinterest"><i class="fab fa-pinterest-square"></i></a>
+          <a href="mailto:?subject=I wanted you to see this site" data-toggle="tooltip" title="Send via Email"><i class="fas fa-envelope-square"></i></a>
+        </span></h4>
+    </div>
+    <div class="clear">
 
-		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php
-			fenchi_posted_on();
-			fenchi_posted_by();
-			?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
+      <div class="postDetails">
+		<a href="<?php the_permalink(); ?>">
+		<?php the_title( sprintf( '<h2 class="postTitle"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+          <!-- <h2 class=""><?php the_title(); ?></h2> -->
+        </a>
+        <a href="#"><span class="publishDate textCenter"><?php the_time( get_option( 'date_format' ) ); ?> </span></a>
+      </div>
+      <div class="postContent">
+       <?php
+        if(is_single()){
+          the_content();
+        }
+        else{ 
+          the_excerpt();
+          ?>
+          <a href="<?php the_permalink(); ?>"><small class="readMore">Read more...</small></a>
+          <?php
+        } 
+        ?>
 
-	<?php fenchi_post_thumbnail(); ?>
+      </div>
+    </div>
+    <?php if(is_single()): ?>
 
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
+    <div class="count">
+      <?php fenchi_setPostViews(get_the_ID()); ?>
+      <ul>
+        <li><i class="fas fa-comments"></i><a href="#"> <?php  echo $number = get_comments_number(); ?></a> </li>
+        <li><i class="fas fa-eye"></i><a href="#"> <?php echo fenchi_getPostViews(get_the_ID()); ?></a> </li>
+      </ul>
 
-	<footer class="entry-footer">
-		<?php fenchi_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+    </div>
+    <div class="tags">
+
+      <ul>
+        <li><a href="#"> <i class="fas fa-tags"></i></a></li>
+        <?php the_tags(' ' , ' ،', ' ')  ?>
+      </ul>
+    </div>
+      <?php endif; ?>
+  </div>
+</div>
+<!-- end post type 1 -->
+</div>
+
+
+<?php
+			//the_posts_navigation();
