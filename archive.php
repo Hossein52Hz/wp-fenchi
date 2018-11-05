@@ -10,15 +10,20 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+	   <?php if ( is_active_sidebar( 'main-sidebar' ) ) : ?>
+        <!-- content -->
+        <div class="col-md-8 allposts">
+	<?php else: ?>
+ 		<!-- content full-width -->
+ 		<div class="col-md-12 allposts">
+	<?php endif; ?>
 
 		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
+			<header class="page-header card mb-4 shadow-sm">
 				<?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
-				the_archive_description( '<div class="archive-description">', '</div>' );
+				the_archive_title( '<h1 class="page-title"><i class="fas fa-tags"></i>', '</h1>' );
+				// the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->
 
@@ -36,7 +41,8 @@ get_header();
 
 			endwhile;
 
-			the_posts_navigation();
+			// page navigation
+			 echo bootstrap_pagination();
 
 		else :
 
@@ -45,8 +51,7 @@ get_header();
 		endif;
 		?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+		</div>
 
 <?php
 get_sidebar();

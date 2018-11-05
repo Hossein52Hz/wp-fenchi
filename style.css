@@ -428,7 +428,16 @@ a:hover {
 
 
 /* archive page */
-
+.page-header{
+    padding: 20px 16px 10px 25px;
+}
+.page-header h1 i{
+    padding-right: 6px;
+}
+.page-header h1 {
+    font-size: 16px;
+    font-weight: bold;
+}
 .archive .postContent,
 .archive .postDetails {
     width: 100%;
