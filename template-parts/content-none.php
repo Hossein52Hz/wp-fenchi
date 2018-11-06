@@ -10,6 +10,8 @@
 ?>
 
 <section class="no-results not-found">
+<div class="card mb-4 shadow-sm">
+			<div class="card-body">
 	<header class="page-header">
 		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'fenchi' ); ?></h1>
 	</header><!-- .page-header -->
@@ -47,5 +49,7 @@
 
 		endif;
 		?>
+		</div>
+		</div>
 	</div><!-- .page-content -->
 </section><!-- .no-results -->

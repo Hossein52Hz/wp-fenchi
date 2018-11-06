@@ -49,11 +49,11 @@ get_header();
 			</div><!-- row -->
 			<?php
 			//  page navigation
-			echo bootstrap_pagination(); 
+			echo fenchi_bootstrap_pagination(); 
 
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
+		else :?>
+			</div><!-- row -->
+		<?php	get_template_part( 'template-parts/content', 'none' );
 
 		endif;
 		?>
