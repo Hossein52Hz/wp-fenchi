@@ -34,7 +34,7 @@
     <div class="collapse headerBg" id="navbarHeader">
       <div class="container">
         <div class="row">
-          <div class="col-sm-8 col-md-7 py-4" id="headerAbout">
+          <div class="col-sm-8 col-md-7 py-4" id="header-about">
             <h4 class="text-white">About</h4>
             <p>Add some information about the album below, the author, or any other background
               context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off
@@ -42,7 +42,7 @@
           </div>
           <div class="col-sm-4 offset-md-1 py-4">
             <h4 class="text-white">Contact</h4>
-            <ul class="list-unstyled" id="headerContact">
+            <ul class="list-unstyled" id="header-contact">
               <li><a href="#" class="text-white">Follow on Twitter</a></li>
               <li><a href="#" class="text-white">Like on Facebook</a></li>
               <li><a href="#" class="text-white">Email me</a></li>
@@ -85,10 +85,10 @@
        
         </nav>
        <!-- toggle with action-->
-       <button id="ChangeToggle" class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarHeader"
+       <button id="changetoggle" class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarHeader"
           aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-          <span id="navbar-hamburger" class="myToggler"><i class="fas fa-bars"></i></span>
-          <span id="navbar-close" class="myToggler hidden"><i class="fa fa-times"></i></span>
+          <span id="navbar-hamburger" class="my-toggler"><i class="fas fa-bars"></i></span>
+          <span id="navbar-close" class="my-toggler hidden"><i class="fa fa-times"></i></span>
         </button>
         <!-- end toggle with action-->
       </div>

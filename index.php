@@ -18,10 +18,10 @@ get_header();
 
      <?php if ( is_active_sidebar( 'main-sidebar' ) ) : ?>
         <!-- content -->
-        <div class="col-md-8 allposts">
+        <div class="col-md-8 all-posts">
 	<?php else: ?>
  		<!-- content full-width -->
- 		<div class="col-md-12 allposts">
+ 		<div class="col-md-12 all-posts">
 	<?php endif; ?>
 
 		<?php

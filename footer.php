@@ -24,8 +24,8 @@
 	<div class="col-md-6 copyRight">
 	  <p> &copy; Copyright 2019 - FenchiGroup. All rights reserved.</p>
 	</div>
-	<div class="col-md-6 goTop">
-	  <a href="#" id="backTop" style="display: none;"><i class="far fa-arrow-alt-circle-up"></i></a>
+	<div class="col-md-6 go-top">
+	  <a href="#" id="back-top" style="display: none;"><i class="far fa-arrow-alt-circle-up"></i></a>
 	  <ul class="footerSocial">
 
 		<li><a href="#" data-toggle="tooltip" title="Facebook"><i class="fab fa-facebook-square"></i></a></li>

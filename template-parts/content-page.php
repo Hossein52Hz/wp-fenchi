@@ -10,9 +10,9 @@
 ?>
 
 <!-- post type1 -->
-<div class="card mb-4 shadow-sm fullWidth">
+<div class="card mb-4 shadow-sm full-width">
   <?php if(!has_post_thumbnail()){
-    echo '<div class="category noThumbnail">';
+    echo '<div class="category no-thumbnail">';
   } 
   else echo '<div class="category">'; ?>
   
@@ -21,7 +21,7 @@
   <div class="card-body">
     <div class="social">
       <h4 class="author"><span><a href="#"> <?php fenchi_posted_by(); ?> </a></span></h4>
-      <h4 class="shareLink"><span>
+      <h4 class="share-link"><span>
           <a href="#" data-toggle="tooltip" title="Share on Facebook"><i class="fab fa-facebook-square"></i></a>
           <a href="#" data-toggle="tooltip" title="Share on Twitter"><i class="fab fa-twitter-square"></i></a>
           <a href="#" data-toggle="tooltip" title="Share on Linkedin"><i class="fab fa-linkedin"></i></a>
@@ -32,13 +32,13 @@
     </div>
     <div class="clear">
 
-      <div class="postDetails">
+      <div class="post-details">
         <a href="<?php the_permalink(); ?>">
-          <h2 class="postTitle"><?php the_title(); ?></h2>
+          <h2 class="post-title"><?php the_title(); ?></h2>
         </a>
-        <a href="#"><span class="publishDate textCenter"><?php the_time( get_option( 'date_format' ) ); ?> </span></a>
+        <a href="#"><span class="publish-date text-center"><?php the_time( get_option( 'date_format' ) ); ?> </span></a>
       </div>
-      <div class="postContent">
+      <div class="posts-content">
        <?php
           the_content();
           

@@ -8,12 +8,12 @@ $(function () {
 $(document).ready(function(){ 
   $(window).scroll(function(){ 
       if ($(this).scrollTop() > 100) { 
-          $('#backTop').fadeIn(); 
+          $('#back-top').fadeIn(); 
       } else { 
-          $('#backTop').fadeOut(); 
+          $('#back-top').fadeOut(); 
       } 
   }); 
-  $('#backTop').click(function(){ 
+  $('#back-top').click(function(){ 
       $("html, body").animate({ scrollTop: 0 }, 600); 
       return false; 
   }); 
@@ -21,7 +21,7 @@ $(document).ready(function(){
 
 //Change toggle icon
 $(function() {
-    $('#ChangeToggle').click(function() {
+    $('#changetoggle').click(function() {
       $('#navbar-hamburger').toggleClass('hidden');
       $('#navbar-close').toggleClass('hidden');  
     });

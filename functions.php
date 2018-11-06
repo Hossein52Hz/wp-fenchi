@@ -159,7 +159,7 @@ function fenchi_widgets_init() {
 		'description'   => esc_html__( 'Add widgets here.', 'fenchi' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s card my-4 shadow-sm"><div class="card-body">',
 		'after_widget'  => '</div></section>',
-		'before_title'  => '<h2 class="widget-title widgetTitle">',
+		'before_title'  => '<h2 class="widget-title widget-title">',
 		'after_title'   => '</h2>',
 	) );
 }

@@ -18,7 +18,7 @@ get_header();
 	<?php endif; ?>
 
         
-          <div class="singlePost">
+          <div class="single-post">
 
 		<?php
 		while ( have_posts() ) :
