@@ -101,21 +101,21 @@ class wp_bootstrap_navwalker extends Walker_Nav_Menu {
 
             }
 
-            
-            // if ($depth === 0) {
-            //     $atts['class'] = 'nav-link';
-            // }
-            // if ($depth === 0 && in_array('menu-item-has-children', $classes)) {
-            //     $atts['class']       .= ' dropdown-toggle';
-            //     $atts['data-toggle']  = 'dropdown';
-            // }
-            // if ($depth > 0) {
-            //     $atts['class'] = 'dropdown-item';
-            // }
-            // if (in_array('current-menu-item', $item->classes)) {
-            //     $atts['class'] .= ' active';
-            // }
-            
+            /*
+            if ($depth === 0) {
+                $atts['class'] = 'nav-link';
+            }
+            if ($depth === 0 && in_array('menu-item-has-children', $classes)) {
+                $atts['class']       .= ' dropdown-toggle';
+                $atts['data-toggle']  = 'dropdown';
+            }
+            if ($depth > 0) {
+                $atts['class'] = 'dropdown-item';
+            }
+            if (in_array('current-menu-item', $item->classes)) {
+                $atts['class'] .= ' active';
+            }
+            */
 
 			$atts = apply_filters( 'nav_menu_link_attributes', $atts, $item, $args );
 

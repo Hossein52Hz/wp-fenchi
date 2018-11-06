@@ -72,9 +72,9 @@
                 'container'       => 'div',
                 'container_id'    => 'navbarResponsive',
                 'container_class' => 'collapse navbar-collapse',
-                'menu_id'         => 'navbarResponsive',
+                'menu_id'         => 'navbarResponsive1',
                 'menu_class'      => 'navbar-nav ml-auto',
-                'depth'           => 4,
+                'depth'           => 3,
                 'fallback_cb'     => 'wp_bootstrap_navwalker::fallback',
                 'walker'          => new wp_bootstrap_navwalker()
                 ));
