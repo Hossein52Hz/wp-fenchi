@@ -70,8 +70,8 @@
     <div class="count">
       <?php fenchi_setPostViews(get_the_ID()); ?>
       <ul>
-        <li><i class="fas fa-comments"></i><a href="#"> <?php  echo $number = get_comments_number(); ?></a> </li>
-        <li><i class="fas fa-eye"></i><a href="#"> <?php echo fenchi_getPostViews(get_the_ID()); ?></a> </li>
+        <li><i class="fas fa-comments"></i><a href="#"> <?php  echo esc_html($number = get_comments_number()); ?></a> </li>
+        <li><i class="fas fa-eye"></i><a href="#"> <?php echo esc_html(fenchi_getPostViews(get_the_ID())); ?></a> </li>
       </ul>
 
     </div>
