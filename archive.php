@@ -42,7 +42,7 @@ get_header();
 			endwhile;
 
 			// page navigation
-			 echo bootstrap_pagination();
+			 echo fenchi_bootstrap_pagination();
 
 		else :
 

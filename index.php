@@ -49,7 +49,7 @@ get_header();
 			endwhile;?>
 
 					 <!-- page navigation -->
-					 <?php echo bootstrap_pagination(); ?>
+					 <?php echo fenchi_bootstrap_pagination(); ?>
     	
 			<?php
 
