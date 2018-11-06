@@ -44,7 +44,9 @@ get_header();
 				 * called content-search.php and that will be used instead.
 				 */
 				if ( has_post_format( 'quote' )) {
+					echo '<div class="col-md-12">';
 					get_template_part( 'template-parts/content', 'quote' );
+					echo '</div>';
 				}else get_template_part( 'template-parts/content', 'search' );
 
 			endwhile;?>
