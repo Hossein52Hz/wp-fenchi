@@ -199,7 +199,30 @@ a:hover {
 .postContentTypeOne .readMore:hover {
     color: #ff4a14;
 }
+/* quote post format */
+.quotePostType{
+    background: #03c7ae;
+    padding: 40px;
+    margin-right: -1.25rem;
+    margin-left: -1.25rem;
+    margin-bottom: 1.25rem;
+}
+.quotePostType .postContentTypeOne p{
+    text-align: center;
+}
+.quotePostType a{
+    color:#fff;
+}
+.quoteContent{
+    background: #ffffff26;
+    padding-right: 25px;
+    padding-top: 25px;
+    padding-bottom: 15px;
+    color: #fff;
+    border-radius: 20px 0px 20px;
+}
 
+/* end quote post format */
 .category{
     position: relative;
     /* margin-bottom: 40px; */
