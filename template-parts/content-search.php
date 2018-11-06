@@ -10,7 +10,7 @@
 ?>
 
 		
-<div class="col-md-6">
+<div class="col-md-12">
 <!-- post type1 -->
 <div class="card mb-4 shadow-sm" id="post-<?php the_ID(); ?>">
   <?php if(!has_post_thumbnail()){
