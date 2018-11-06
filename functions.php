@@ -89,6 +89,18 @@ if ( ! function_exists( 'fenchi_setup' ) ) :
 			'gallery',
 			'caption',
 		) );
+			/*
+	 * Enable support for Post Formats.
+	 *
+	 * See: https://codex.wordpress.org/Post_Formats
+	 */
+		add_theme_support( 'post-formats', array(
+			'image',
+			'video',
+			'quote',
+			'gallery',
+			'audio',
+		) );
 
 		// Set up the WordPress core custom background feature.
 		add_theme_support( 'custom-background', apply_filters( 'fenchi_custom_background_args', array(
