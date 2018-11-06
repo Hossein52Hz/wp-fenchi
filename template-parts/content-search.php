@@ -79,7 +79,7 @@
 
       <ul>
         <li><a href="#"> <i class="fas fa-tags"></i></a></li>
-        <?php the_tags(' ' , ' ،', ' ')  ?>
+        <?php the_tags(' ' , ' &comma;', ' ')  ?>
       </ul>
     </div>
       <?php endif; ?>
