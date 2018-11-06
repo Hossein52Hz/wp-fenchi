@@ -55,7 +55,7 @@ function fenchi_bootstrap_pagination( \WP_Query $wp_query = null, $echo = true )
 		$pagination .= '</ul></div>';
 
 		if ( $echo ) {
-			echo esc_html($pagination);
+			echo "$pagination";
 		} else {
 			return $pagination;
 		}
