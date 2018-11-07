@@ -779,14 +779,16 @@ a:hover {
     z-index: 1;
 }
 
-.aboutMe p {
+.about-me p {
     text-align: justify;
 }
-
+#author-pic{
+    margin: -1.25rem -1.25rem 1.25rem -1.25rem;
+}
 .author-picture {
     border-radius: 3px 3px 0 0;
     width: 100%;
-    border-bottom: 2px solid #ddd;
+    /* border-bottom: 2px solid #ddd; */
 }
 
 .social-link {
@@ -801,6 +803,7 @@ a:hover {
     background: #007bff;
     border-radius: 4px;
     display: inline-block;
+    margin: 2px;
 }
 
 .social-link a:hover {
