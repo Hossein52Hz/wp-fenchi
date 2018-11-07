@@ -117,34 +117,35 @@ class fenchi_about_me_Widget extends WP_Widget {
 		// display social link if they set from widget section
 		echo '<div class="social-link">';
 		if ( $instance['twitter'] !== 'twitter_url' ) {
-			echo '<a href="'.$instance['twitter'].'"><i class="fab fa-twitter"></i></a>';
+			echo '<a href="'.$instance['twitter'].'" data-toggle="tooltip" title="" data-original-title="Follow on Twitter"><i class="fab fa-twitter"></i></a>';
 		}
 		if ( $instance['facebook'] !== 'facebook_url' ) {
-			echo '<a href="'.$instance['facebook'].'"><i class="fab fa-facebook-f"></i></a>';
+			echo '<a href="'.$instance['facebook'].'" data-toggle="tooltip" title="" data-original-title="Follow on Facebook"><i class="fab fa-facebook-f"></i></a>';
 		}
 		if ( $instance['linkedin'] !== 'linkedin_url' ) {
-			echo '<a href="'.$instance['linkedin'].'"><i class="fab fa-linkedin-in"></i></a>';
+			echo '<a href="'.$instance['linkedin'].'" data-toggle="tooltip" title="" data-original-title="Connect on Linkedin"><i class="fab fa-linkedin-in"></i></a>';
 		}
 		if ( $instance['instagram'] !== 'instagram_url' ) {
-			echo '<a href="'.$instance['instagram'].'"><i class="fab fa-instagram"></i></a>';
+			echo '<a href="'.$instance['instagram'].'" data-toggle="tooltip" title="" data-original-title="Follow on Instagram"><i class="fab fa-instagram"></i></a>';
 		}
 		if ( $instance['pinterest'] !== 'pinterest_url' ) {
-			echo '<a href="'.$instance['pinterest'].'"><i class="fab fa-pinterest-p"></i></a>';
+			echo '<a href="'.$instance['pinterest'].'" data-toggle="tooltip" title="" data-original-title="Follow on Pinterest"><i class="fab fa-pinterest-p"></i></a>';
 		}
 		if ( $instance['github'] !== 'github_url' ) {
-			echo '<a href="'.$instance['github'].'"><i class="fab fa-github-square"></i></a>';
+			echo '<a href="'.$instance['github'].'" data-toggle="tooltip" title="" data-original-title="Follow on Github"><i class="fab fa-github-square"></i></a>';
 		}
 		if ( $instance['gitlab'] !== 'gitlab_url' ) {
-			echo '<a href="'.$instance['gitlab'].'"><i class="fab fa-gitlab"></i></a>';
+			echo '<a href="'.$instance['gitlab'].'" data-toggle="tooltip" title="" data-original-title="Follow on Gitlab"><i class="fab fa-gitlab"></i></a>';
 		}
 
 		if ( $instance['email'] !== 'email_url' ) {
-			echo '<a href="'.$instance['email'].'"><i class="far fa-envelope"></i></a>';
+			echo '<a href="mailto:'.$instance['email'].'?Subject=Hi" data-toggle="tooltip" title="" data-original-title="Send email"><i class="far fa-envelope"></i></a>';
 		}
-
+		
 		if ( $instance['tell'] !== 'tell_url' ) {
-			echo '<a href="'.$instance['tell'].'"><i class="fas fa-phone"></i></a>';
+			echo '<a href="tel:'.$instance['tell'].'" data-toggle="tooltip" title="" data-original-title="Call me"><i class="fas fa-phone"></i></a>';
 		}
+		
 	
 		echo '</div>';
 
