@@ -121,6 +121,7 @@ a:hover {
 }
 .custom-logo{
     float: left;
+    margin-right: 14px;
 }
 .main-menu{
     padding-left: 0;
@@ -135,6 +136,7 @@ a:hover {
 }
 #info{
     float: left;
+    margin-right: 20px;
 }
 .navbar-toggler:focus {
     outline: none;

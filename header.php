@@ -56,12 +56,17 @@
     <div class="navbar  bg-white shadow-sm">
       <div class="container d-flex justify-content-between">
         <!-- main navbar -->
-        <div class="site-branding">
+        <nav class="navbar navbar-expand-lg main-menu">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span id="" class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+          </button>
+          <div class="site-branding">
 			<?php
       the_custom_logo();?>
     <div id="info">
       <?php
-      
+    
 			if ( is_front_page() && is_home() ) :
 				?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
@@ -76,14 +81,9 @@
 				?>
 				<p class="site-description"><?php echo $fenchi_description; /* WPCS: xss ok. */ ?></p>
       <?php endif; ?>
+
       </div>
 		</div><!-- .site-branding -->
-        <nav class="navbar navbar-expand-lg main-menu">
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span id="" class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
-          </button>
-
          <?php
                 wp_nav_menu(array(
                 'theme_location'    => 'primary',
