@@ -34,7 +34,7 @@
 
       <div class="post-details">
         <a href="<?php the_permalink(); ?>">
-          <h2 class="post-title"><?php the_title(); ?></h2>
+          <h1 class="post-title"><?php the_title(); ?></h1>
         </a>
         <a href="#"><span class="publish-date text-center"><?php the_time( get_option( 'date_format' ) ); ?> </span></a>
       </div>
