@@ -222,7 +222,12 @@ require get_template_directory() . '/inc/template-functions.php';
 /**
  * Customizer additions.
  */
+// Main customizer
 require get_template_directory() . '/inc/customizer.php';
+// Site info section
+require get_template_directory() . '/inc/customize/about-site-setting.php';
+// footer section
+require get_template_directory() . '/inc/customize/footer-setting.php';
 
 /**
  * Load Jetpack compatibility file.
@@ -232,6 +237,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
        
 /**
- * Customizer additions.
+ * widget additions.
  */
 require get_template_directory() . '/inc/widgets/about-me.php';
+
