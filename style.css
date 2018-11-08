@@ -907,7 +907,7 @@ a:hover {
 }
 
 .single-post .publish-date {
-    float: none;
+    /* float: none; */
     display: block;
     text-align: right;
 }
