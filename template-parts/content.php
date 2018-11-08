@@ -44,9 +44,13 @@
     <div class="clear">
 
       <div class="post-details">
-        <a href="<?php the_permalink(); ?>">
-          <h2 class="post-title"><?php the_title(); ?></h2>
-        </a>
+        <?php
+		if ( is_singular() ) :
+			the_title( '<h1 class="post-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
+		else :
+			the_title( '<h2 class="post-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+		endif;
+        ?>
         <a href="#"><span class="publish-date text-center"><?php the_time( get_option( 'date_format' ) ); ?> </span></a>
       </div>
       <div class="posts-content">
