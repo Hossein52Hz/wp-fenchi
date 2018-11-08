@@ -42,13 +42,16 @@ a:hover {
 #header-about {
     padding-left: 40px;
 }
-#header-about i{
+
+#header-about i {
     margin-right: 7px;
 }
+
 #header-about p {
     color: #fff;
 }
-#navbarHeader h4{
+
+#navbarHeader h4 {
     font-size: 24px;
     font-weight: bold;
 }
@@ -128,28 +131,35 @@ a:hover {
 .my-toggler:active {
     outline: none;
 }
-.navbar-logo{
+
+.navbar-logo {
     margin-right: 20px;
 }
-.custom-logo{
+
+.custom-logo {
     float: left;
     margin-right: 14px;
 }
-.main-menu{
+
+.main-menu {
     padding-left: 0;
 }
-.site-title{
+
+.site-title {
     font-size: 1.6rem;
     margin-bottom: 0;
 }
-.site-description{
+
+.site-description {
     font-size: 1rem;
     margin-bottom: 0;
 }
-#info{
+
+#info {
     float: left;
     margin-right: 20px;
 }
+
 .navbar-toggler:focus {
     outline: none;
 }
@@ -815,9 +825,11 @@ a:hover {
 .about-me p {
     text-align: justify;
 }
-#author-pic{
+
+#author-pic {
     margin: -1.25rem -1.25rem 1.25rem -1.25rem;
 }
+
 .author-picture {
     border-radius: 3px 3px 0 0;
     width: 100%;
@@ -1066,6 +1078,7 @@ footer p {
     .author {
         width: 100% !important;
     }
+
     #changetoggle {
         display: none;
     }
