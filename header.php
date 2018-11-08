@@ -59,7 +59,7 @@
 			$fenchi_description = get_bloginfo( 'description', 'display' );
 			if ( $fenchi_description || is_customize_preview() ) :
 				?>
-				<p class="site-description"><?php echo $fenchi_description; /* WPCS: xss ok. */ ?></p>
+				<p class="site-description"><?php echo "$fenchi_description"; /* WPCS: xss ok. */ ?></p>
       <?php endif; ?>
 
       </div>

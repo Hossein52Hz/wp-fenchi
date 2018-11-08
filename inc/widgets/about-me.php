@@ -106,7 +106,7 @@ class fenchi_about_me_Widget extends WP_Widget {
 	* Front-end display of widget
 	*/
 	public function widget( $args, $instance ) {
-		echo $args['before_widget'];
+		echo wp_kses_post($args['before_widget'], 'fenchi');
 
 		// Output generated fields
 		echo '<div id="author-pic"><img class="img-responsive author-picture" src="'.$instance['user-profile'].'"></div>';
@@ -117,39 +117,39 @@ class fenchi_about_me_Widget extends WP_Widget {
 		// display social link if they set from widget section
 		echo '<div class="social-link">';
 		if ( $instance['twitter'] !== 'twitter_url' ) {
-			echo '<a href="'.$instance['twitter'].'" data-toggle="tooltip" title="" data-original-title="Follow on Twitter"><i class="fab fa-twitter"></i></a>';
+			echo '<a href="'.$instance['twitter'].'" data-toggle="tooltip" data-original-title="Follow on Twitter"><i class="fab fa-twitter"></i></a>';
 		}
 		if ( $instance['facebook'] !== 'facebook_url' ) {
-			echo '<a href="'.$instance['facebook'].'" data-toggle="tooltip" title="" data-original-title="Follow on Facebook"><i class="fab fa-facebook-f"></i></a>';
+			echo '<a href="'.$instance['facebook'].'" data-toggle="tooltip" data-original-title="Follow on Facebook"><i class="fab fa-facebook-f"></i></a>';
 		}
 		if ( $instance['linkedin'] !== 'linkedin_url' ) {
-			echo '<a href="'.$instance['linkedin'].'" data-toggle="tooltip" title="" data-original-title="Connect on Linkedin"><i class="fab fa-linkedin-in"></i></a>';
+			echo '<a href="'.$instance['linkedin'].'" data-toggle="tooltip" data-original-title="Connect on Linkedin"><i class="fab fa-linkedin-in"></i></a>';
 		}
 		if ( $instance['gplus'] !== 'gplus_url' ) {
-			echo '<a href="tel:'.$instance['gplus'].'" data-toggle="tooltip" title="" data-original-title="Google+"><i class="fab fa-google-plus-g"></i></i></a>';
+			echo '<a href="tel:'.$instance['gplus'].'" data-toggle="tooltip" data-original-title="Google+"><i class="fab fa-google-plus-g"></i></i></a>';
 		}
 		if ( $instance['instagram'] !== 'instagram_url' ) {
-			echo '<a href="'.$instance['instagram'].'" data-toggle="tooltip" title="" data-original-title="Follow on Instagram"><i class="fab fa-instagram"></i></a>';
+			echo '<a href="'.$instance['instagram'].'" data-toggle="tooltip" data-original-title="Follow on Instagram"><i class="fab fa-instagram"></i></a>';
 		}
 		if ( $instance['pinterest'] !== 'pinterest_url' ) {
-			echo '<a href="'.$instance['pinterest'].'" data-toggle="tooltip" title="" data-original-title="Follow on Pinterest"><i class="fab fa-pinterest-p"></i></a>';
+			echo '<a href="'.$instance['pinterest'].'" data-toggle="tooltip" data-original-title="Follow on Pinterest"><i class="fab fa-pinterest-p"></i></a>';
 		}
 		if ( $instance['github'] !== 'github_url' ) {
-			echo '<a href="'.$instance['github'].'" data-toggle="tooltip" title="" data-original-title="Follow on Github"><i class="fab fa-github-square"></i></a>';
+			echo '<a href="'.$instance['github'].'" data-toggle="tooltip" data-original-title="Follow on Github"><i class="fab fa-github-square"></i></a>';
 		}
 		if ( $instance['gitlab'] !== 'gitlab_url' ) {
-			echo '<a href="'.$instance['gitlab'].'" data-toggle="tooltip" title="" data-original-title="Follow on Gitlab"><i class="fab fa-gitlab"></i></a>';
+			echo '<a href="'.$instance['gitlab'].'" data-toggle="tooltip" data-original-title="Follow on Gitlab"><i class="fab fa-gitlab"></i></a>';
 		}
 
 		if ( $instance['email'] !== 'email_url' ) {
-			echo '<a href="mailto:'.$instance['email'].'?Subject=Hi" data-toggle="tooltip" title="" data-original-title="Send email"><i class="far fa-envelope"></i></a>';
+			echo '<a href="mailto:'.$instance['email'].'?Subject=Hi" data-toggle="tooltip" data-original-title="Send email"><i class="far fa-envelope"></i></a>';
 		}
 		
 		
 	
 		echo '</div>';
 
-		echo $args['after_widget'];
+		echo wp_kses_post($args['after_widget'], 'fenchi');
 	}
 
 	/**
@@ -213,7 +213,7 @@ class fenchi_about_me_Widget extends WP_Widget {
 					$output .= '</p>';
 			}
 		}
-		echo $output;
+		echo wp_kses_post($output, 'fenchi');
 	}
 
 	public function form( $instance ) {
