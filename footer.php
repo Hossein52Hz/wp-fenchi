@@ -22,16 +22,33 @@
 
 
 	<div class="col-md-6 copyRight">
-	  <p> &copy; Copyright 2019 - FenchiGroup. All rights reserved.</p>
+	<!-- Copy right content -->
+	<?php if ( get_theme_mod( 'fenchi_theme_options_copyright' ) != 'All right reserved' ): ?>
+		<?php echo wp_kses_post(get_theme_mod( 'fenchi_theme_options_copyright' )); ?>
+		<?php endif; ?>
 	</div>
+
+
+		
+
 	<div class="col-md-6 go-top">
 	  <a href="#" id="back-top" style="display: none;"><i class="far fa-arrow-alt-circle-up"></i></a>
 	  <ul class="footerSocial">
+		<!-- twitter url -->
+		<?php if ( get_theme_mod( 'fenchi_theme_options_footer_twitter' ) != 'twitter_url' ): ?>
+		<li><a href="<?php echo esc_attr(get_theme_mod( 'fenchi_theme_options_footer_twitter' )); ?>" data-toggle="tooltip" title="Twitter"><i class="fab fa-twitter-square"></i></a></li>
+		<?php endif; ?>
 
-		<li><a href="#" data-toggle="tooltip" title="Facebook"><i class="fab fa-facebook-square"></i></a></li>
-		<li><a href="#" data-toggle="tooltip" title="Twitter"><i class="fab fa-twitter-square"></i></a></li>
-		<li><a href="#" data-toggle="tooltip" title="Linkedin"><i class="fab fa-linkedin"></i></a></li>
-		<li><a href="#" data-toggle="tooltip" title="Google+"><i class="fab fa-google-plus-square"></i></a></li>
+		<!-- facbook url -->
+		<?php if ( get_theme_mod( 'fenchi_theme_options_footer_facebook' ) != 'facbook_url' ): ?>
+		<li><a href="<?php echo esc_attr(get_theme_mod( 'fenchi_theme_options_footer_facebook' )); ?>" data-toggle="tooltip" title="Facebook"><i class="fab 		fa-facebook-square"></i></a></li>
+		<?php endif; ?>
+
+		<!-- linkedin url -->
+		<?php if ( get_theme_mod( 'fenchi_theme_options_footer_linkedin' ) != 'linkedin_url'  ): ?>
+		<li><a href="<?php echo esc_attr(get_theme_mod( 'fenchi_theme_options_footer_linkedin' )); ?>" data-toggle="tooltip" title="Linkedin"><i class="fab fa-linkedin"></i></a></li>
+		<?php endif; ?>
+		
 	  </ul>
 	</div>
 	<!--Footer Bottom-->
