@@ -30,28 +30,8 @@
 <body <?php body_class(); ?>>
   <!-- header -->
   <header class="fixed-top">
-    <!--  about section in header -->
-    <div class="collapse headerBg" id="navbarHeader">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-8 col-md-7 py-4" id="header-about">
-            <h4 class="text-white">About</h4>
-            <p>Add some information about the album below, the author, or any other background
-              context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off
-              to some social networking sites or contact information.</p>
-          </div>
-          <div class="col-sm-4 offset-md-1 py-4">
-            <h4 class="text-white">Contact</h4>
-            <ul class="list-unstyled" id="header-contact">
-              <li><a href="#" class="text-white">Follow on Twitter</a></li>
-              <li><a href="#" class="text-white">Like on Facebook</a></li>
-              <li><a href="#" class="text-white">Email me</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- end about section in header -->
+    <!--  about-site section in header -->
+   <?php get_template_part('template-parts/about-site-template', 'about-site-template'); ?>
 
     <div class="navbar  bg-white shadow-sm">
       <div class="container d-flex justify-content-between">
@@ -102,13 +82,18 @@
 
        
         </nav>
-       <!-- toggle with action-->
-       <button id="changetoggle" class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarHeader"
+        
+        <?php if ( get_theme_mod( 'fenchi_theme_options_check_about_site' )=='1' ): ?>
+		    <!-- toggle with action-->
+        <button id="changetoggle" class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarHeader"
           aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
           <span id="navbar-hamburger" class="my-toggler"><i class="fas fa-bars"></i></span>
           <span id="navbar-close" class="my-toggler hidden"><i class="fa fa-times"></i></span>
         </button>
         <!-- end toggle with action-->
+		    <?php endif; ?>
+        
+       
       </div>
     </div>
 

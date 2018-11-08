@@ -26,7 +26,7 @@ function fenchi_about_site_customize_register($wp_customize){
 
     //Description of site
     $wp_customize->add_setting('fenchi_theme_options_about_site', array(
-        'default'        => __('Write about site here...','fenchi'),
+        'default'        => __('Write about site here','fenchi'),
         'capability'     => 'edit_theme_options',
         'sanitize_callback' => 'wp_kses_post', 
     ));
@@ -65,7 +65,7 @@ function fenchi_about_site_customize_register($wp_customize){
 
     //phone number
     $wp_customize->add_setting('fenchi_theme_options_tell', array(
-        'default'        => __('+19123456789', 'fenchi'),
+        'default'        => __('+121212121', 'fenchi'),
         'capability'     => 'edit_theme_options',
         'sanitize_callback' => 'wp_kses_post', 
         
@@ -74,6 +74,18 @@ function fenchi_about_site_customize_register($wp_customize){
         'label'      => __('Your phone number', 'fenchi'),
         'section'    => 'fenchi_header_about_site',
         'settings'   => 'fenchi_theme_options_tell',
+    ));
+   
+    $wp_customize->add_setting('fenchi_theme_options_check_about_site', array(
+        'capability'     => 'edit_theme_options',
+        'sanitize_callback' => 'wp_kses_post', 
+        
+    ));
+    $wp_customize->add_control('fenchi_check_display', array(
+        'label'      => __('Display About site section', 'fenchi'),
+        'type'      => 'checkbox',
+        'section'    => 'fenchi_header_about_site',
+        'settings'   => 'fenchi_theme_options_check_about_site',
     ));
    
      
