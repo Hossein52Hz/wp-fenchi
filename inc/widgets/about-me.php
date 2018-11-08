@@ -95,9 +95,9 @@ class fenchi_about_me_Widget extends WP_Widget {
 			'type' => 'text',
 		),
 		array(
-			'label' => 'Tell',
-			'id' => 'tell',
-			'default' => 'tell_url',
+			'label' => 'Gplus',
+			'id' => 'gplus',
+			'default' => 'gplus_url',
 			'type' => 'text',
 		),
 	);
@@ -125,6 +125,9 @@ class fenchi_about_me_Widget extends WP_Widget {
 		if ( $instance['linkedin'] !== 'linkedin_url' ) {
 			echo '<a href="'.$instance['linkedin'].'" data-toggle="tooltip" title="" data-original-title="Connect on Linkedin"><i class="fab fa-linkedin-in"></i></a>';
 		}
+		if ( $instance['gplus'] !== 'gplus_url' ) {
+			echo '<a href="tel:'.$instance['gplus'].'" data-toggle="tooltip" title="" data-original-title="Google+"><i class="fab fa-google-plus-g"></i></i></a>';
+		}
 		if ( $instance['instagram'] !== 'instagram_url' ) {
 			echo '<a href="'.$instance['instagram'].'" data-toggle="tooltip" title="" data-original-title="Follow on Instagram"><i class="fab fa-instagram"></i></a>';
 		}
@@ -142,9 +145,6 @@ class fenchi_about_me_Widget extends WP_Widget {
 			echo '<a href="mailto:'.$instance['email'].'?Subject=Hi" data-toggle="tooltip" title="" data-original-title="Send email"><i class="far fa-envelope"></i></a>';
 		}
 		
-		if ( $instance['tell'] !== 'tell_url' ) {
-			echo '<a href="tel:'.$instance['tell'].'" data-toggle="tooltip" title="" data-original-title="Call me"><i class="fas fa-phone"></i></a>';
-		}
 		
 	
 		echo '</div>';
