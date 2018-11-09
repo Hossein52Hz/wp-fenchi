@@ -223,7 +223,7 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 // Main customizer
-require get_template_directory() . '/inc/customizer.php';
+require get_template_directory() . '/inc/customize/customizer.php';
 // Site info section
 require get_template_directory() . '/inc/customize/about-site-setting.php';
 // footer section
