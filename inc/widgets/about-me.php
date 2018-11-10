@@ -24,7 +24,7 @@ class fenchi_about_me_Widget extends WP_Widget {
 		array(
 			'label' => 'user profile',
 			'id' => 'user-profile',
-			'default' => 'url',
+			'default' => '#',
 			'type' => 'media',
 		),
 		array(
@@ -213,7 +213,7 @@ class fenchi_about_me_Widget extends WP_Widget {
 					$output .= '</p>';
 			}
 		}
-		echo wp_kses_post($output, 'fenchi');
+		echo $output;
 	}
 
 	public function form( $instance ) {
