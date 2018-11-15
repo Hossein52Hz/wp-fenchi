@@ -24,80 +24,80 @@ class fenchi_about_me_Widget extends WP_Widget {
 		array(
 			'label' => 'user profile',
 			'id' => 'user-profile',
-			'default' => '#',
+			'default' => '',
 			'type' => 'media',
 		),
 		array(
 			'label' => 'full name',
 			'id' => 'full-name',
-			'default' => 'your name',
+			'default' => '',
 			'type' => 'text',
 		),
 		array(
 			'label' => 'your career',
 			'id' => 'career',
-			'default' => 'your job',
+			'default' => '',
 			'type' => 'text',
 		),
 		array(
 			'label' => 'your text',
 			'id' => 'describe',
-			'default' => 'your text',
+			'default' => '',
 			'type' => 'textarea',
 		),
 		array(
 			'label' => 'Twitter',
 			'id' => 'twitter',
-			'default' => 'twitter_url',
+			'default' => '',
 			'type' => 'text',
 		),
 		array(
 			'label' => 'Facebook',
 			'id' => 'facebook',
-			'default' => 'facebook_url',
+			'default' => '',
 			'type' => 'text',
 		),
 		array(
 			'label' => 'Linkedin',
 			'id' => 'linkedin',
-			'default' => 'linkedin_url',
+			'default' => '',
 			'type' => 'text',
 		),
 		array(
 			'label' => 'Instagram',
 			'id' => 'instagram',
-			'default' => 'instagram_url',
+			'default' => '',
 			'type' => 'text',
 		),
 		array(
 			'label' => 'Pinterest',
 			'id' => 'pinterest',
-			'default' => 'pinterest_url',
+			'default' => '',
 			'type' => 'text',
 		),
 		array(
 			'label' => 'Github',
 			'id' => 'github',
-			'default' => 'github_url',
+			'default' => '',
 			'type' => 'text',
 		),
 		array(
 			'label' => 'Gitlab',
 			'id' => 'gitlab',
-			'default' => 'gitlab_url',
+			'default' => '',
 			'type' => 'text',
 		),
 		
 		array(
 			'label' => 'Email',
 			'id' => 'email',
-			'default' => 'email_url',
+			'default' => '',
 			'type' => 'text',
 		),
 		array(
 			'label' => 'Gplus',
 			'id' => 'gplus',
-			'default' => 'gplus_url',
+			'default' => '',
 			'type' => 'text',
 		),
 	);
@@ -108,41 +108,54 @@ class fenchi_about_me_Widget extends WP_Widget {
 	public function widget( $args, $instance ) {
 		echo wp_kses_post($args['before_widget'], 'fenchi');
 
+		$user_profile = isset($instance['user-profile']) ? $instance['user-profile'] : 'Add from widgets';
+		$full_name = isset($instance['full-name']) ? $instance['full-name'] : 'Add from widgets';
+		$career = isset($instance['career']) ? $instance['career'] : 'Add from widgets';
+		$describe = isset($instance['describe']) ? $instance['describe'] : 'Add from widgets';
 		// Output generated fields
-		echo '<div id="author-pic"><img class="img-responsive author-picture" src="'.$instance['user-profile'].'"></div>';
-		echo '<h5 class="line-left"><span>'.$instance['full-name'].'</span></h5>';
-		echo '<h5 class="line-left"><span>'.$instance['career'].'</span></h5>';
-		echo '<div class="about-me"><p>'.$instance['describe'].'</p></div>';
+		echo '<div id="author-pic"><img class="img-responsive author-picture" src="'.$user_profile.'"></div>';
+		echo '<h5 class="line-left"><span>'.$full_name.'</span></h5>';
+		echo '<h5 class="line-left"><span>'.$career.'</span></h5>';
+		echo '<div class="about-me"><p>'.$describe.'</p></div>';
 	
 		// display social link if they set from widget section
 		echo '<div class="social-link">';
-		if ( $instance['twitter'] !== 'twitter_url' ) {
-			echo '<a href="'.$instance['twitter'].'" data-toggle="tooltip" data-original-title="Follow on Twitter"><i class="fab fa-twitter"></i></a>';
+		$twitter = isset($instance['twitter']) ? $instance['twitter'] : '';
+			if($twitter != ''){
+			echo '<a href="'.$twitter.'" data-toggle="tooltip" data-original-title="Follow on Twitter"><i class="fab fa-twitter"></i></a>';
+			}
+		$facebook = isset($instance['facebook']) ? $instance['facebook'] : '';
+		if($facebook != ''){
+			echo '<a href="'.$facebook.'" data-toggle="tooltip" data-original-title="Follow on Facebook"><i class="fab fa-facebook-f"></i></a>';
 		}
-		if ( $instance['facebook'] !== 'facebook_url' ) {
-			echo '<a href="'.$instance['facebook'].'" data-toggle="tooltip" data-original-title="Follow on Facebook"><i class="fab fa-facebook-f"></i></a>';
+		$linkedin = isset($instance['linkedin']) ? $instance['linkedin'] : '';
+		if($linkedin != ''){
+			echo '<a href="'.$linkedin.'" data-toggle="tooltip" data-original-title="Connect on Linkedin"><i class="fab fa-linkedin-in"></i></a>';
 		}
-		if ( $instance['linkedin'] !== 'linkedin_url' ) {
-			echo '<a href="'.$instance['linkedin'].'" data-toggle="tooltip" data-original-title="Connect on Linkedin"><i class="fab fa-linkedin-in"></i></a>';
+		$gplus = isset($instance['gplus']) ? $instance['gplus'] : '';
+		if($gplus != ''){
+			echo '<a href="tel:'.$gplus.'" data-toggle="tooltip" data-original-title="Google+"><i class="fab fa-google-plus-g"></i></i></a>';
 		}
-		if ( $instance['gplus'] !== 'gplus_url' ) {
-			echo '<a href="tel:'.$instance['gplus'].'" data-toggle="tooltip" data-original-title="Google+"><i class="fab fa-google-plus-g"></i></i></a>';
+		$instagram = isset($instance['instagram']) ? $instance['instagram'] : '';
+		if($instagram != ''){
+				echo '<a href="'.$instagram.'" data-toggle="tooltip" data-original-title="Follow on Instagram"><i class="fab fa-instagram"></i></a>';
 		}
-		if ( $instance['instagram'] !== 'instagram_url' ) {
-			echo '<a href="'.$instance['instagram'].'" data-toggle="tooltip" data-original-title="Follow on Instagram"><i class="fab fa-instagram"></i></a>';
+		$pinterest = isset($instance['pinterest']) ? $instance['pinterest'] : '';
+		if($pinterest != ''){
+		echo '<a href="'.$pinterest.'" data-toggle="tooltip" data-original-title="Follow on Pinterest"><i class="fab fa-pinterest-p"></i></a>';
 		}
-		if ( $instance['pinterest'] !== 'pinterest_url' ) {
-			echo '<a href="'.$instance['pinterest'].'" data-toggle="tooltip" data-original-title="Follow on Pinterest"><i class="fab fa-pinterest-p"></i></a>';
+		$github = isset($instance['github']) ? $instance['github'] : '';
+		if($github != ''){
+				echo '<a href="'.$github.'" data-toggle="tooltip" data-original-title="Follow on Github"><i class="fab fa-github-square"></i></a>';
 		}
-		if ( $instance['github'] !== 'github_url' ) {
-			echo '<a href="'.$instance['github'].'" data-toggle="tooltip" data-original-title="Follow on Github"><i class="fab fa-github-square"></i></a>';
-		}
-		if ( $instance['gitlab'] !== 'gitlab_url' ) {
-			echo '<a href="'.$instance['gitlab'].'" data-toggle="tooltip" data-original-title="Follow on Gitlab"><i class="fab fa-gitlab"></i></a>';
+		$gitlab = isset($instance['gitlab']) ? $instance['gitlab'] : '';
+		if($gitlab != ''){
+				echo '<a href="'.$gitlab.'" data-toggle="tooltip" data-original-title="Follow on Gitlab"><i class="fab fa-gitlab"></i></a>';
 		}
 
-		if ( $instance['email'] !== 'email_url' ) {
-			echo '<a href="mailto:'.$instance['email'].'?Subject=Hi" data-toggle="tooltip" data-original-title="Send email"><i class="far fa-envelope"></i></a>';
+		$email = isset($instance['email']) ? $instance['email'] : '';
+		if($email != ''){
+			echo '<a href="mailto:'.$email.'?Subject=Hi" data-toggle="tooltip" data-original-title="Send email"><i class="far fa-envelope"></i></a>';
 		}
 		
 		
