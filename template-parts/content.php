@@ -31,15 +31,21 @@
   </div>
   <div class="card-body">
     <div class="social">
+      <div class="row">
+        <div class="col-md-4">
       <h4 class="author"><span><a href="#"> <?php fenchi_posted_by(); ?> </a></span></h4>
-      <h4 class="share-link"><span>
-          <a href="#" data-toggle="tooltip" title="Share on Facebook"><i class="fab fa-facebook-square"></i></a>
-          <a href="#" data-toggle="tooltip" title="Share on Twitter"><i class="fab fa-twitter-square"></i></a>
-          <a href="#" data-toggle="tooltip" title="Share on Linkedin"><i class="fab fa-linkedin"></i></a>
-          <a href="#" data-toggle="tooltip" title="Share on Google+"><i class="fab fa-google-plus-square"></i></a>
-          <a href="#" data-toggle="tooltip" title="Share on Pinterest"><i class="fab fa-pinterest-square"></i></a>
-          <a href="mailto:?subject=I wanted you to see this site" data-toggle="tooltip" title="Send via Email"><i class="fas fa-envelope-square"></i></a>
-        </span></h4>
+        </div>
+        <div class="col-md-8">
+          <h4 class="share-link"><span>
+            <a href="#" data-toggle="tooltip" title="Share on Facebook"><i class="fab fa-facebook-square"></i></a>
+            <a href="#" data-toggle="tooltip" title="Share on Twitter"><i class="fab fa-twitter-square"></i></a>
+            <a href="#" data-toggle="tooltip" title="Share on Linkedin"><i class="fab fa-linkedin"></i></a>
+            <a href="#" data-toggle="tooltip" title="Share on Google+"><i class="fab fa-google-plus-square"></i></a>
+            <a href="#" data-toggle="tooltip" title="Share on Pinterest"><i class="fab fa-pinterest-square"></i></a>
+            <a href="mailto:?subject=I wanted you to see this site" data-toggle="tooltip" title="Send via Email"><i class="fas fa-envelope-square"></i></a>
+            </span>
+          </h4>
+      </div>
     </div>
     <div class="clear">
 
@@ -61,7 +67,7 @@
         else{ 
           the_excerpt();
           ?>
-          <a href="<?php the_permalink(); ?>"><small class="read-more">Read more...</small></a>
+          <a href="<?php the_permalink(); ?>"><small class="read-more"><?php __('Read more...', 'fenchi') ?></small></a>
           <?php
         } 
         ?>
@@ -89,7 +95,7 @@
   </div>
 </div>
 <!-- end post type 1 -->
-
+      </div>
 </div>
 
 <?php
