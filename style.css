@@ -386,7 +386,7 @@ a:hover {
     /* padding-left: 100px; */
     width: 100%;
 }
-.social .col-md-8{
+.social .col-8{
     padding-left:5px;
 }
 .social .col-md-8 h4{
@@ -1103,7 +1103,7 @@ footer p {
     }
 
     .share-link {
-        width: 52%;
+        /* width: 52%; */
     }
 
     .post-details {
@@ -1148,7 +1148,7 @@ footer p {
     }
 
     .full-width .share-link {
-        width: 53%;
+        /* width: 53%; */
     }
 
     .full-width .post-details-type-one .post-title {
