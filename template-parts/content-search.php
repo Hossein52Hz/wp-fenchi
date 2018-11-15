@@ -92,7 +92,8 @@
   </div>
 </div>
 <!-- end post type 1 -->
-</div>
+</div></div>
+
 
 
 <?php

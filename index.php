@@ -50,17 +50,16 @@ get_header();
 
 					 <!-- page navigation -->
 					 <?php echo fenchi_bootstrap_pagination(); ?>
-    	
+    		</div>
 			<?php
 
 		else :
 
 			get_template_part( 'template-parts/content', 'none' );
-
+			
 		endif;
 		?>
-
-		</div>
+<!-- </div> -->
 <?php
 get_sidebar();
 get_footer();
