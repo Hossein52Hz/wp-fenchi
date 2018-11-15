@@ -7,7 +7,7 @@
  * @package fenchi
  */
 ?>
-
+</div>
 <?php if ( is_active_sidebar( 'main-sidebar' ) ) : ?>
 	<!-- sidebar -->
 	<div class="col-md-4 sidebar">
@@ -16,4 +16,3 @@
 	</div>
 <?php endif; ?>
 
-</div>
