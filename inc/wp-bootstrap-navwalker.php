@@ -196,7 +196,7 @@ class wp_bootstrap_navwalker extends Walker_Nav_Menu {
 	 *
 	 */
     public static function fallback( $args ) {
-        //if ( current_user_can( 'manage_options' ) ) {
+        if ( current_user_can( 'manage_options' ) ) {
 
             extract( $args );
 
@@ -223,17 +223,15 @@ class wp_bootstrap_navwalker extends Walker_Nav_Menu {
                 $fb_output .= ' class="' . $menu_class . '"';
 
             $fb_output .= '>';
-            $fb_output .= '<li class="nav-item"><a href="#" class="nav-link">Home</a></li>';
-            $fb_output .= '<li class="nav-item"><a href="#" class="nav-link">About Us</a></li>';
-            $fb_output .= '<li class="nav-item"><a href="#" class="nav-link">Gallery</a></li>';
-            $fb_output .= '<li class="nav-item"><a href="#" class="nav-link">Contact Us</a></li>';
-            /*$fb_output .= '<li><a href="' . admin_url( 'nav-menus.php' ) . '">Add a menu</a></li>';*/
+			$fb_output .= '<li class="nav-item"><a href="';
+			$fb_output .= esc_url( home_url( '/' ) );
+			$fb_output.='wp-admin/nav-menus.php" class="nav-link">Click to add Menu</a></li>';
             $fb_output .= '</ul>';
 
             if ( $container )
                 $fb_output .= '</' . $container . '>';
 
-            echo esc_html($fb_output);
-        //}
+            echo wp_kses_post($fb_output);
+        }
     }
 }
