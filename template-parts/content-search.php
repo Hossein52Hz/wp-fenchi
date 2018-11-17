@@ -65,7 +65,7 @@
         else{ 
           the_excerpt();
           ?>
-          <a href="<?php the_permalink(); ?>"><small class="read-more"><?php __('Read more...', 'fenchi') ?></small></a>
+          <a href="<?php the_permalink(); ?>"><small class="read-more"><?php echo esc_html('Read more...', 'fenchi') ?></small></a>
           <?php
         } 
         ?>
