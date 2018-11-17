@@ -46,7 +46,7 @@ if ( ! function_exists( 'fenchi_posted_by' ) ) :
 			'<a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a>'
 		);
 
-		echo $byline ; // WPCS: XSS OK.
+		echo wp_kses_post($byline) ; // WPCS: XSS OK.
 
 	}
 endif;
