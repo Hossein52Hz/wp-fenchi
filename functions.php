@@ -246,5 +246,5 @@ require get_template_directory() . '/inc/widgets/about-me.php';
 /**
  * Meta boxes.
  */
-require get_template_directory() . '/inc/meta-box.php';
+// require get_template_directory() . '/inc/meta-box.php';
 
