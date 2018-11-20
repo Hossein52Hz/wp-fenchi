@@ -19,7 +19,9 @@
   else echo '<div class="category">'; ?>
   
     <?php fenchi_post_thumbnail(); ?>
-    
+    <div class="post-format-icon">
+    <i class="fas fa-pen"></i>
+    </div>
     <?php if(has_category()): ?>
     <div class="cat-list">
       <ul>
