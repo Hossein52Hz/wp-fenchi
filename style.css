@@ -992,7 +992,26 @@ a:hover {
 .count ul {
     padding-left: 25px;
 }
+.post-format-icon{
+    left: auto;
+    right: 50%;
+    margin-left: 0px;
+    margin-right: -22px;
+    position: absolute;
+    bottom: -15px;
 
+}
+.post-format-icon i{
+
+    text-align: center;
+    border-radius: 50%;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    color: #41d6c3;
+    line-height: 40px;
+    background-color: #fff;
+}
 /* end single post */
 
 
