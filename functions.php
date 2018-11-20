@@ -95,6 +95,8 @@ if ( ! function_exists( 'fenchi_setup' ) ) :
 	 * See: https://codex.wordpress.org/Post_Formats
 	 */
 		add_theme_support( 'post-formats', array(
+			'standard',
+			'aside',
 			'image',
 			'video',
 			'quote',
