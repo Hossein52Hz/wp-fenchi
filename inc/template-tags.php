@@ -146,3 +146,65 @@ if ( ! function_exists( 'fenchi_post_thumbnail' ) ) :
 		endif; // End is_singular().
 	}
 endif;
+
+
+/**
+* Sample template tag function for outputting a cmb2 file_list
+*
+* @param  string  $file_list_meta_key The field meta key. ('wiki_test_file_list')
+* @param  string  $img_size           Size of image to show
+*/
+
+function fenchi_cmb2_output_file_list( $file_list_meta_key, $img_size = 'full' ) {
+
+// Get the list of pictures
+$pictures = get_post_meta( get_the_ID(), $file_list_meta_key, 1 );
+
+	echo '<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"><ol class="carousel-indicators">';
+	$active_indicators = 1;
+	$counter = 0;
+	foreach( (array) $pictures as $attachment_id => $attachment_url ) {
+
+		if ($active_indicators == 1) {
+			echo '<li data-target="#carouselExampleIndicators" data-slide-to="';
+			echo $counter;
+			echo '" class="active" ></li>';
+			$active_indicators+=1;
+			$counter+=1;
+		}
+		else {
+			echo '<li data-target="#carouselExampleIndicators" data-slide-to="';
+			echo $counter;
+			echo '"></li>';
+			$counter+=1;
+		}
+	}
+
+	echo '</ol><div class="carousel-inner">';
+	// Loop through them and output an image
+		$active = 1;
+	foreach ( (array) $pictures as $attachment_id => $attachment_url ) {
+		if ($active==1) {
+			echo '<div class="carousel-item active">';
+			$active+=1;
+		}
+		else {
+			echo '<div class="carousel-item">';
+		}
+
+		echo wp_get_attachment_image( $attachment_id, $img_size );
+		echo '</div>';
+	}
+	echo '</div>
+	<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+	<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+	<span class="sr-only">Previous</span>
+	</a>
+	<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+	<span class="carousel-control-next-icon" aria-hidden="true"></span>
+	<span class="sr-only">Next</span>
+	</a>
+	</div>';
+
+}
+
