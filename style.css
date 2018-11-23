@@ -254,9 +254,14 @@ a:hover {
     padding: 40px;
     margin-right: -1.25rem;
     margin-left: -1.25rem;
-    margin-bottom: 1.25rem;
+    margin-bottom: 0;
 }
-
+.quote-padding{
+    margin-top: 1.25rem;
+}
+.quote-body{
+    padding-bottom: 0;
+}
 .quote-post-type .posts-content-type-one p {
     text-align: center;
 }
@@ -272,6 +277,28 @@ a:hover {
     padding-bottom: 15px;
     color: #fff;
     border-radius: 20px 0 20px;
+}
+.quote-text{
+    text-align: center;
+    font-size: 26px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.quote-author{
+    text-align: center;
+    padding-top: 10px;
+}
+.post-type-icon {
+    position: absolute;
+    bottom: 120px;
+    right: 50px;
+    font-size: 3em;
+    color: #fff;
+    opacity: 0.15;
+    
+}
+.quote-body .post-type-icon{
+    bottom: 42px;
 }
 
 /* end quote post format */
