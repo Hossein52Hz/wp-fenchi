@@ -942,7 +942,7 @@ a:hover {
     text-align: right;
 }
 
-.single-post img,
+.single-post img, 
 .category img {
     /* width: 100%; */
     margin: 0 auto;
@@ -951,7 +951,12 @@ a:hover {
     padding-bottom: 10px;
     height: auto;
 }
-
+.carousel-item img{
+    max-width: 100%;
+}
+.carousel-indicators{
+    bottom: 35px;
+}
 .thumbnail {
     border-radius: .25rem .25rem 0 0;
 }
