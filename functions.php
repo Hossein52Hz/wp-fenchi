@@ -248,3 +248,9 @@ require get_template_directory() . '/inc/widgets/about-me.php';
  */
 // require get_template_directory() . '/inc/meta-box.php';
 
+/**
+ * cmb2 Meta boxe plugin
+ */
+ require get_template_directory() . '/cmb2/framework-functions.php';
+
+
