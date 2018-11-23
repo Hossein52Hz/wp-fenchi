@@ -32,7 +32,11 @@
     </div>
     <?php endif;?>
   </div>
+  <?php if ( is_singular() ) :?>
   <div class="card-body">
+  <?php else :?>
+  <div class="card-body quote-body">
+  <?php endif;?>
     <div class="social">
       <div class="row">
         <div class="col-4 cal-sm-4">
@@ -40,18 +44,7 @@
                 <?php fenchi_posted_by(); ?> </a></span></h4>
         </div>
         <?php get_template_part( 'inc/share'); ?>
-        <!-- <div class="col-8 cal-sm-8">
-          <h4 class="share-link"><span>
-              <a href="#" data-toggle="tooltip" title="Share on Facebook"><i class="fab fa-facebook-square"></i></a>
-              <a href="#" data-toggle="tooltip" title="Share on Twitter"><i class="fab fa-twitter-square"></i></a>
-              <a href="#" data-toggle="tooltip" title="Share on Linkedin"><i class="fab fa-linkedin"></i></a>
-              <a href="#" data-toggle="tooltip" title="Share on Google+"><i class="fab fa-google-plus-square"></i></a>
-              <a href="#" data-toggle="tooltip" title="Share on Pinterest"><i class="fab fa-pinterest-square"></i></a>
-              <a href="mailto:?subject=I wanted you to see this site" data-toggle="tooltip" title="Send via Email"><i
-                  class="fas fa-envelope-square"></i></a>
-            </span>
-          </h4>
-        </div> -->
+
       </div>
       <div class="clear">
         <div class="quote-post-type">
@@ -70,15 +63,36 @@
                   <?php the_time( get_option( 'date_format' ) ); ?> </span></a>
             </div>
             <div class="posts-content-type-one">
-              <?php
+     <?php
+     $quote_text = get_post_meta( get_the_ID(), 'fenchi_metabox_quotetext', 1 );
+     $quote_author = get_post_meta( get_the_ID(), 'fenchi_metabox_quoteauthor', 1 );
         if(is_single()){
-          the_content();
+          
+          if (!empty($quote_text) ) {
+            ?>
+            <h3 class="quote-text"><a href="<?php the_permalink(); ?>">
+              <?php echo $quote_text;?>
+              </a></h3>
+            <p class="quote-author">
+            <?php echo $quote_author;?>
+          </p>
+          <div class="post-type-icon"><i class="fas fa-quote-right"></i></div>
+            <?php
+          }else the_content();
         }
         else{ 
-          the_excerpt();
-          ?>
-
-              <?php
+          if (!empty($quote_text) ) {
+            ?>
+            <h3 class="quote-text"><a href="<?php the_permalink(); ?>">
+              <?php echo $quote_text;?>
+              </a></h3>
+            <p class="quote-author">
+            <?php echo $quote_author;?>
+          </p>
+          <div class="post-type-icon"><i class="fas fa-quote-right"></i></div>
+          <?php
+          }else the_excerpt();
+          
         } 
         ?>
             </div>
@@ -87,7 +101,7 @@
       </div>
       <?php if(is_single()): ?>
 
-      <div class="count">
+      <div class="count quote-padding">
         <?php fenchi_setPostViews(get_the_ID()); ?>
         <ul>
           <li><i class="fas fa-comments"></i><a href="#">
@@ -97,7 +111,7 @@
         </ul>
 
       </div>
-      <div class="tags">
+      <div class="tags quote-padding">
 
         <ul>
           <li><a href="#"> <i class="fas fa-tags"></i></a></li>
