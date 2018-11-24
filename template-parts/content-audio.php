@@ -13,16 +13,67 @@
 
 <!-- post type1 -->
 <div class="card mb-4 shadow-sm" >
-  <?php if(!has_post_thumbnail()){
-    echo '<div class="category no-thumbnail">';
+<?php 
+$check_audio = get_post_meta( get_the_ID(), 'fenchi_metabox_audio', 1 );
+$check_audio_background = get_post_meta( get_the_ID(), 'fenchi_metabox_audiobackground', 1 );
+?>
+  <?php if(!has_post_thumbnail() && empty($check_audio_background)){
+    echo '<div class="category no-thumbnail">';?>
+    <?php if (!empty($check_audio)) {?>
+     <div class="just-player">
+     <?php $attr = array(
+           'src'      => "$check_audio",
+           'loop'     => '',
+           'autoplay' => '',
+           'preload'  => 'none'
+           );
+     echo wp_audio_shortcode( $attr ); ?>
+   </div>
+   <?php
+    }
+    
   } 
-  else echo '<div class="category">'; ?>
-  
-    <?php fenchi_post_thumbnail(); ?>
-
+  elseif(!empty($check_audio_background)){
+   echo '<div class="category">';
+   ?>
+   <div class="post-thumbnail">
+   <img src="<?php echo $check_audio_background; ?>" ></div>
     <div class="post-format-icon">
     <i class="fas fa-volume-up"></i>
     </div>
+    <div class="player">
+   <?php $attr = array(
+           'src'      => "$check_audio",
+           'loop'     => '',
+           'autoplay' => '',
+           'preload'  => 'none'
+           );
+     echo wp_audio_shortcode( $attr ); ?>
+   </div>
+    <?php
+  }
+   else {
+    echo '<div class="category">';
+     fenchi_post_thumbnail();?>
+      <div class="player">
+   <?php $attr = array(
+           'src'      => "$check_audio",
+           'loop'     => '',
+           'autoplay' => '',
+           'preload'  => 'none'
+           );
+     echo wp_audio_shortcode( $attr ); ?>
+   </div>
+      <div class="post-format-icon">
+    <i class="fas fa-volume-up"></i>
+    </div>
+    <?php
+   }
+?>
+
+    
+ 
+   
     <?php if(has_category()): ?>
     <div class="cat-list">
       <ul>
