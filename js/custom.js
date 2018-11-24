@@ -1,8 +1,8 @@
-// usein bootstrap tooltip
-$(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-});
+// use in bootstrap tooltip
 
+(function($) {
+    $('.bs-tooltip').tooltip();
+})(jQuery);
 
 // Move Back top of the site button
 $(document).ready(function(){ 
