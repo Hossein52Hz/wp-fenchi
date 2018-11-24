@@ -192,7 +192,6 @@ function fenchi_scripts() {
 	wp_enqueue_script( 'bootstrap-js' , get_template_directory_uri() . '/js/bootstrap.min.js', array(), '4.1.1', true );
 	wp_enqueue_script( 'ekko-lightbox-js' , get_template_directory_uri() . '/js/ekko-lightbox.min.js', array(), '5.3.1', true );
 	wp_enqueue_script( 'custom-js' , get_template_directory_uri() . '/js/custom.js', array(), '2018', true );
-
 }
 add_action( 'wp_enqueue_scripts', 'fenchi_scripts' );
 
