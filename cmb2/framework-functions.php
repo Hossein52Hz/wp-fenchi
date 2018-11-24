@@ -183,6 +183,12 @@ function fenchi_register_demo_metabox() {
 		'id'   => $prefix . 'audio',
 		'type' => 'file',
 	) );
+	$cmb_demo->add_field( array(
+		'name' => esc_html__( 'Audio background', 'fenchi' ),
+		'desc' => esc_html__( 'Upload an image or enter a URL.', 'fenchi' ),
+		'id'   => $prefix . 'audiobackground',
+		'type' => 'file',
+	) );
 
 	$cmb_demo->add_field( array(
 		'name' => esc_html__( 'video', 'fenchi' ),
