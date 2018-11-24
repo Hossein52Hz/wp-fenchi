@@ -39,3 +39,9 @@ $('.dropdown').on("hidden.bs.dropdown", function() {
     // hide any open menus when parent closes
     $('.dropdown-menu.show').removeClass('show');
 });
+
+// lightbox image for image-post-format
+$(document).on("click", '[data-toggle="lightbox"]', function(event) {
+    event.preventDefault();
+    $(this).ekkoLightbox();
+  });

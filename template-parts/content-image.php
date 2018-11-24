@@ -13,16 +13,35 @@
 
 <!-- post type1 -->
 <div class="card mb-4 shadow-sm" >
-  <?php if(!has_post_thumbnail()){
+
+<?php $check_img = get_post_meta( get_the_ID(), 'fenchi_metabox_image', 1 );?>
+
+
+  <?php if(!has_post_thumbnail() && empty($check_img)){
     echo '<div class="category no-thumbnail">';
   } 
-  else echo '<div class="category">'; ?>
-  
-    <?php fenchi_post_thumbnail(); ?>
-
+  elseif(!empty($check_img)){
+    echo '<div class="category">'; ?>
+    <div class="post-thumbnail">
+    <a href="<?php echo $check_img ?>" data-toggle="lightbox" data-gallery="gallery">
+        <img src="<?php echo $check_img ?>" alt="">
+      </a>
+    </div>
     <div class="post-format-icon">
     <i class="far fa-image"></i>
     </div>
+ <?php 
+  } else{
+    echo '<div class="category">';
+    fenchi_post_thumbnail();?>
+    <div class="post-format-icon">
+    <i class="far fa-image"></i>
+    </div>
+    
+<?php } ?>
+    
+
+    
     <?php if(has_category()): ?>
     <div class="cat-list">
       <ul>
