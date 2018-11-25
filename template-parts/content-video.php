@@ -13,16 +13,37 @@
 
 <!-- post type1 -->
 <div class="card mb-4 shadow-sm" >
-  <?php if(!has_post_thumbnail()){
+  <?php
+  $check_video = get_post_meta( get_the_ID(), 'fenchi_metabox_video', 1 );
+  if(!has_post_thumbnail() && empty($check_video)){
     echo '<div class="category no-thumbnail">';
   } 
-  else echo '<div class="category">'; ?>
-  
-    <?php fenchi_post_thumbnail(); ?>
-
+  elseif(!empty($check_video)){
+    
+    echo '<div class="category">'; ?>
+    <?php $attr = array(
+           'src'      => "$check_video",
+           'autoplay' => 'on',
+           'preload'  => 'none'
+           );
+           ?>
+      <div class="video-post">
+     <?php echo wp_video_shortcode( $attr ); ?>
+     </div>
+     <div class="post-format-icon">
+    <i class="fas fa-video"></i>
+    </div>
+     <?php  
+  } else{
+    echo '<div class="category">';
+    fenchi_post_thumbnail();?>
     <div class="post-format-icon">
     <i class="fas fa-video"></i>
     </div>
+  <?php }  ?>
+    
+  
+    
     <?php if(has_category()): ?>
     <div class="cat-list">
       <ul>
