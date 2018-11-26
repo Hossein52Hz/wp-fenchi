@@ -249,8 +249,15 @@ require get_template_directory() . '/inc/widgets/about-me.php';
 // require get_template_directory() . '/inc/meta-box.php';
 
 /**
- * cmb2 Meta boxe plugin
+ * tgmpa plugin to detect active/require plugins
  */
- require get_template_directory() . '/cmb2/framework-functions.php';
+require get_template_directory() . '/inc/require-plugins.php';
 
+/**
+ * cmb2 Meta boxes
+ */
+if ( class_exists( 'TGM_Plugin_Activation' ) ) {
+
+ require get_template_directory() . '/inc/cmb2-metaboxes.php';
+}
 
