@@ -173,7 +173,6 @@ add_action( 'widgets_init', 'fenchi_widgets_init' );
 function fenchi_scripts() {
 	
 	wp_enqueue_script( 'fenchi-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
 	wp_enqueue_script( 'fenchi-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -190,7 +189,7 @@ function fenchi_scripts() {
 	wp_enqueue_script( 'jquery-js' , get_template_directory_uri() . '/js/jquery-3.3.1.min.js', array(), '3.3.1', true );
 	wp_enqueue_script( 'popper' , get_template_directory_uri() . '/js/popper.min.js', array(), '2017', true );
 	wp_enqueue_script( 'bootstrap-js' , get_template_directory_uri() . '/js/bootstrap.min.js', array(), '4.1.1', true );
-	wp_enqueue_script( 'ekko-lightbox-js' , get_template_directory_uri() . '/js/ekko-lightbox.min.js', array(), '5.3.1', true );
+	wp_enqueue_script( 'ekko-lightbox-js' , get_template_directory_uri() . '/js/ekko-lightbox.min.js', array(), '5.0.0', true );
 	wp_enqueue_script( 'custom-js' , get_template_directory_uri() . '/js/custom.js', array(), '2018', true );
 }
 add_action( 'wp_enqueue_scripts', 'fenchi_scripts' );
