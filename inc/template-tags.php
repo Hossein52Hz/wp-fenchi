@@ -160,7 +160,7 @@ function fenchi_cmb2_output_file_list( $file_list_meta_key, $img_size = 'full' )
 // Get the list of pictures
 $pictures = get_post_meta( get_the_ID(), $file_list_meta_key, 1 );
 
-	echo '<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"><ol class="carousel-indicators">';
+	echo '<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"><ol class="carousel-indicators" id="carousel-indicator">';
 	$active_indicators = 1;
 	$counter = 0;
 	foreach( (array) $pictures as $attachment_id => $attachment_url ) {
