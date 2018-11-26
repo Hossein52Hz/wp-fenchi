@@ -41,7 +41,9 @@ $('.dropdown').on("hidden.bs.dropdown", function() {
 });
 
 // lightbox image for image-post-format
-$(document).on("click", '[data-toggle="lightbox"]', function(event) {
-    event.preventDefault();
-    $(this).ekkoLightbox();
-  });
+jQuery( document ).ready(function( $ ) {
+  $(document).on("click", '[data-toggle="lightbox"]', function(event) {
+      event.preventDefault();
+      $(this).ekkoLightbox();
+    });
+});
