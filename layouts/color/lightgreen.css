@@ -2,14 +2,20 @@ a {
     color: #41d6c3;
 }
 
+a:hover {
+    color: #ff4a14;
+}
+
 .sidebar .input-group-append .do-search {
     background: #41d6c3;
     border-color: #41d6c3;
 }
+
 .sidebar .input-group-append .do-search:hover {
     background: #ff4a14;
     border-color: #ff4a14;
 }
+
 .posts-content-type-one .read-more {
     color: #41d6c3;
 
@@ -19,7 +25,8 @@ a {
     color: #41d6c3;
 }
 
-.tags i, .count i{
+.tags i,
+.count i {
     color: #41d6c3;
 }
 
@@ -48,7 +55,9 @@ a {
 #back-top {
     background: #41d6c3;
 }
-
+#back-top:hover{
+    background:  #ff4a14;
+}
 .go-top a {
     color: #41d6c3;
 }
@@ -102,4 +111,65 @@ a:hover {
 
 .headerBg {
     background: #00a893 !important;
+}
+
+.widget_recent_comments ul li {
+    color: #41d6c3;
+}
+
+.tagcloud a:hover {
+    border: 1px solid #ff4a14;
+}
+
+#wp-calendar caption {
+    background: #41d6c3;
+}
+
+#wp-calendar th {
+    background: #41d6c3;
+}
+
+.post-format-icon i {
+    color: #41d6c3;
+}
+
+.posts-content-type-one .read-more:hover {
+    color: #ff4a14;
+}
+
+.tagcloud a:hover {
+    border: 1px solid #ff4a14;
+}
+
+.cmt-btn:hover {
+    border-color: #ff4a14;
+}
+
+.form-control:focus {
+    border-color: #ff4a14;
+}
+
+.posts-content .read-more:hover {
+    color: #ff4a14;
+}
+
+.cat-item a:hover,
+.widget_recent_entries ul li a:hover,
+.widget_meta ul li a:hover,
+.widget_nav_menu .menu-item a:hover,
+.widget_recent_comments ul li a:hover {
+    color: #ff4a14;
+}
+
+#header-contact i {
+    color: #00a893 !important;
+}
+.quote-post-type {
+    background: #03c7ae;
+}
+.mejs-container,
+.mejs-container .mejs-controls,
+.mejs-embed,
+.mejs-embed body {
+    background: #03a09d !important;
 }
