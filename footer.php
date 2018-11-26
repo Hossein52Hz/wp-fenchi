@@ -24,7 +24,9 @@
 	<div class="col-md-6 copyRight">
 	<!-- Copy right content -->
 	<?php if ( get_theme_mod( 'fenchi_theme_options_copyright' ) != 'All right reserved' ): ?>
+		<p>
 		<?php echo wp_kses_post(get_theme_mod( 'fenchi_theme_options_copyright' )); ?>
+		</p>
 		<?php endif; ?>
 	</div>
 
