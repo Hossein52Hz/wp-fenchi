@@ -327,7 +327,8 @@ a:hover {
     width: 100% !important;
     height: 100% !important;
 }
-.mejs-container {
+
+.video-post .mejs-container {
     padding-top: 56.25%;
 }
 .wp-video, video.wp-video-shortcode {
