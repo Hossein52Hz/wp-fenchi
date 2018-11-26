@@ -71,10 +71,10 @@
           if (!empty($quote_text) ) {
             ?>
             <h3 class="quote-text"><a href="<?php the_permalink(); ?>">
-              <?php echo $quote_text;?>
+              <?php echo esc_html($quote_text);?>
               </a></h3>
             <p class="quote-author">
-            <?php echo $quote_author;?>
+            <?php echo esc_html($quote_author);?>
           </p>
           <div class="post-type-icon"><i class="fas fa-quote-right"></i></div>
             <?php
@@ -84,10 +84,10 @@
           if (!empty($quote_text) ) {
             ?>
             <h3 class="quote-text"><a href="<?php the_permalink(); ?>">
-              <?php echo $quote_text;?>
+              <?php echo esc_html($quote_text);?>
               </a></h3>
             <p class="quote-author">
-            <?php echo $quote_author;?>
+            <?php echo esc_html($quote_author);?>
           </p>
           <div class="post-type-icon"><i class="fas fa-quote-right"></i></div>
           <?php

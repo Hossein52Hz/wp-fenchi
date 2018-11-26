@@ -167,14 +167,14 @@ $pictures = get_post_meta( get_the_ID(), $file_list_meta_key, 1 );
 
 		if ($active_indicators == 1) {
 			echo '<li data-target="#carouselExampleIndicators" data-slide-to="';
-			echo $counter;
+			echo esc_html($counter);
 			echo '" class="active" ></li>';
 			$active_indicators+=1;
 			$counter+=1;
 		}
 		else {
 			echo '<li data-target="#carouselExampleIndicators" data-slide-to="';
-			echo $counter;
+			echo esc_html($counter);
 			echo '"></li>';
 			$counter+=1;
 		}

@@ -45,7 +45,7 @@ function fenchi_render_row_cb( $field_args, $field ) {
 	?>
 	<div class="custom-field-row <?php echo esc_attr( $classes ); ?>">
 		<p><label for="<?php echo esc_attr( $id ); ?>"><?php echo esc_html( $label ); ?></label></p>
-		<p><input id="<?php echo esc_attr( $id ); ?>" type="text" name="<?php echo esc_attr( $name ); ?>" value="<?php echo $value; ?>"/></p>
+		<p><input id="<?php echo esc_attr( $id ); ?>" type="text" name="<?php echo esc_attr( $name ); ?>" value="<?php echo esc_html($value); ?>"/></p>
 		<p class="description"><?php echo esc_html( $description ); ?></p>
 	</div>
 	<?php
@@ -60,7 +60,7 @@ function fenchi_render_row_cb( $field_args, $field ) {
 function fenchi_display_text_small_column( $field_args, $field ) {
 	?>
 	<div class="custom-column-display <?php echo esc_attr( $field->row_classes() ); ?>">
-		<p><?php echo $field->escaped_value(); ?></p>
+		<p><?php echo esc_html($field->escaped_value()); ?></p>
 		<p class="description"><?php echo esc_html( $field->args( 'description' ) ); ?></p>
 	</div>
 	<?php

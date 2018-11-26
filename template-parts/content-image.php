@@ -23,8 +23,8 @@
   elseif(!empty($check_img)){
     echo '<div class="category">'; ?>
     <div class="post-thumbnail">
-    <a href="<?php echo $check_img ?>" data-toggle="lightbox" data-gallery="gallery">
-        <img src="<?php echo $check_img ?>" alt="">
+    <a href="<?php echo esc_html($check_img); ?>" data-toggle="lightbox" data-gallery="gallery">
+        <img src="<?php echo esc_html($check_img); ?>">
       </a>
     </div>
     <div class="post-format-icon">

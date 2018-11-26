@@ -226,7 +226,7 @@ class fenchi_about_me_Widget extends WP_Widget {
 					$output .= '</p>';
 			}
 		}
-		echo wp_kses_post($output);
+		echo "$output";
 	}
 
 	public function form( $instance ) {

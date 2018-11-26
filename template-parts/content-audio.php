@@ -37,7 +37,7 @@ $check_audio_background = get_post_meta( get_the_ID(), 'fenchi_metabox_audioback
    echo '<div class="category">';
    ?>
    <div class="post-thumbnail">
-   <img src="<?php echo $check_audio_background; ?>" ></div>
+   <img src="<?php echo esc_html($check_audio_background); ?>" ></div>
     <div class="post-format-icon">
     <i class="fas fa-volume-up"></i>
     </div>
