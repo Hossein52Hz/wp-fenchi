@@ -90,85 +90,84 @@ function fenchi_register_demo_metabox() {
 	/**
 	 * Sample metabox to demonstrate each field type included
 	 */
-	$cmb_demo = new_cmb2_box( array(
-		'id'            => $prefix . 'metabox',
-		'title'         => esc_html__( 'Post Settings', 'fenchi' ),
+	$cmb_link = new_cmb2_box( array(
+		'id'            => 'metabox-post-link',
+		'title'         => esc_html__( 'Link Settings', 'fenchi' ),
 		'object_types'  => array( 'post' ), // Post type
-		// 'show_on_cb' => 'fenchi_show_if_front_page', // function should return a bool value
-		// 'context'    => 'normal',
-		// 'priority'   => 'high',
-		// 'show_names' => true, // Show field names on the left
-		// 'cmb_styles' => false, // false to disable the CMB stylesheet
-		// 'closed'     => true, // true to keep the metabox closed by default
-		// 'classes'    => 'extra-class', // Extra cmb2-wrap classes
-		// 'classes_cb' => 'fenchi_add_some_classes', // Add classes through a callback.
+		'context'      => 'normal',
+		'priority'     => 'default',
 	) );
-
-	$cmb_demo->add_field( array(
-		'name'       => esc_html__( 'Test Text', 'fenchi' ),
-		'desc'       => esc_html__( 'field description (optional)', 'fenchi' ),
-		'id'         => $prefix . 'text',
-		'type'       => 'text',
-		'show_on_cb' => 'fenchi_hide_if_no_cats', // function should return a bool value
-		// 'sanitization_cb' => 'my_custom_sanitization', // custom sanitization callback parameter
-		// 'escape_cb'       => 'my_custom_escaping',  // custom escaping callback parameter
-		// 'on_front'        => false, // Optionally designate a field to wp-admin only
-		// 'repeatable'      => true,
-		// 'column'          => true, // Display field value in the admin post-listing columns
+	$cmb_link->add_field( array(
+		'name' => esc_html__( 'Link', 'fenchi' ),
+		'desc' => esc_html__( 'add your link', 'fenchi' ),
+		'id'   => $prefix . 'url',
+		'type' => 'text_url',
 	) );
-
-	$cmb_demo->add_field( array(
+	// metabox for Quote post format
+	$cmb_quote = new_cmb2_box( array(
+		'id'           => 'metabox-post-quote',
+		'title'        => __( 'Quote post setting', 'fenchi' ),
+		'object_types' => array( 'post' ),
+		'context'      => 'normal',
+		'priority'     => 'default',
+	) );
+	$cmb_quote->add_field( array(
 		'name' => esc_html__( 'Quote Author', 'fenchi' ),
 		'desc' => esc_html__( 'Add author name', 'fenchi' ),
 		'id'   => $prefix . 'quoteauthor',
 		'type' => 'text_small',
-		// 'repeatable' => true,
-		// 'column' => array(
-		// 	'name'     => esc_html__( 'Column Title', 'fenchi' ), // Set the admin column title
-		// 	'position' => 2, // Set as the second column.
-		// );
-		// 'display_cb' => 'fenchi_display_text_small_column', // Output the display of the column values through a callback.
 	) );
-
-
-
-	$cmb_demo->add_field( array(
+	$cmb_quote->add_field( array(
 		'name' => esc_html__( 'Quote Text', 'fenchi' ),
 		'desc' => esc_html__( 'add quote content', 'fenchi' ),
 		'id'   => $prefix . 'quotetext',
 		'type' => 'textarea_small',
 	) );
-
-	$cmb_demo->add_field( array(
-		'name' => esc_html__( 'Link', 'fenchi' ),
-		'desc' => esc_html__( 'add your link', 'fenchi' ),
-		'id'   => $prefix . 'url',
-		'type' => 'text_url',
-		// 'protocols' => array('http', 'https', 'ftp', 'ftps', 'mailto', 'news', 'irc', 'gopher', 'nntp', 'feed', 'telnet'), // Array of allowed protocols
-		// 'repeatable' => true,
+	// metabox for Image post format
+	$cmb_image = new_cmb2_box( array(
+		'id'           => 'metabox-post-image',
+		'title'        => __( 'Image post setting', 'fenchi' ),
+		'object_types' => array( 'post' ),
+		'context'      => 'normal',
+		'priority'     => 'default',
 	) );
-
-
-	$cmb_demo->add_field( array(
+	$cmb_image->add_field( array(
 		'name' => esc_html__( 'Image', 'fenchi' ),
 		'desc' => esc_html__( 'Upload an image or enter a URL.', 'fenchi' ),
 		'id'   => $prefix . 'image',
 		'type' => 'file',
 	) );
-	$cmb_demo->add_field( array(
+	// metabox for Audio post format
+	$cmb_audio = new_cmb2_box( array(
+		'id'           => 'metabox-post-audio',
+		'title'        => __( 'Audio post setting', 'fenchi' ),
+		'object_types' => array( 'post' ),
+		'context'      => 'normal',
+		'priority'     => 'default',
+	) );
+	$cmb_audio->add_field( array(
 		'name' => esc_html__( 'Audio', 'fenchi' ),
 		'desc' => esc_html__( 'Upload an audio or enter a URL.', 'fenchi' ),
 		'id'   => $prefix . 'audio',
 		'type' => 'file',
 	) );
-	$cmb_demo->add_field( array(
+	$cmb_audio->add_field( array(
 		'name' => esc_html__( 'Audio background', 'fenchi' ),
 		'desc' => esc_html__( 'Upload an image or enter a URL.', 'fenchi' ),
 		'id'   => $prefix . 'audiobackground',
 		'type' => 'file',
 	) );
 
-	$cmb_demo->add_field( array(
+	// metabox for Video post format
+	$cmb_video = new_cmb2_box( array(
+		'id'           => 'metabox-post-video',
+		'title'        => __( 'Video post setting', 'fenchi' ),
+		'object_types' => array( 'post' ),
+		'context'      => 'normal',
+		'priority'     => 'default',
+	) );
+
+	$cmb_video->add_field( array(
 		'name' => esc_html__( 'video', 'fenchi' ),
 		'desc' => esc_html__( 'Upload an video or enter a URL.', 'fenchi' ),
 		'id'   => $prefix . 'video',
@@ -176,7 +175,24 @@ function fenchi_register_demo_metabox() {
 	) );
 
 
-	$cmb_demo->add_field( array(
+	// $cmb_demo->add_field( array(
+	// 	'name'         => esc_html__( 'Gallery images', 'fenchi' ),
+	// 	'desc'         => esc_html__( 'Upload or add multiple images.', 'fenchi' ),
+	// 	'id'           => $prefix . 'gallery_list',
+	// 	'type'         => 'file_list',
+	// 	'preview_size' => array( 100, 100 ), // Default: array( 50, 50 )
+	// ) );
+
+	// metabox for gallery post format
+	$cmb_gallery = new_cmb2_box( array(
+		'id'           => 'metabox-post-gallery',
+		'title'        => __( 'Gallery post setting', 'fenchi' ),
+		'object_types' => array( 'post' ),
+		'context'      => 'normal',
+		'priority'     => 'default',
+	) );
+
+	$cmb_gallery->add_field( array(
 		'name'         => esc_html__( 'Gallery images', 'fenchi' ),
 		'desc'         => esc_html__( 'Upload or add multiple images.', 'fenchi' ),
 		'id'           => $prefix . 'gallery_list',
@@ -185,4 +201,3 @@ function fenchi_register_demo_metabox() {
 	) );
 
 }
-?>
