@@ -194,6 +194,16 @@ function fenchi_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'fenchi_scripts' );
 
+/**
+ *  Register Metabox js in wordpress admin
+ */
+function display_metabax_scripts() {
+	
+	wp_enqueue_script( 'display-metabox-js' , get_template_directory_uri() . '/js/metabox.js', array(), '1', true );
+
+}
+add_action('admin_enqueue_scripts', 'display_metabax_scripts');
+
 
 /**
  *  Register Custom Navigation Walker
