@@ -90,19 +90,6 @@ function fenchi_register_demo_metabox() {
 	/**
 	 * Sample metabox to demonstrate each field type included
 	 */
-	$cmb_link = new_cmb2_box( array(
-		'id'            => 'metabox-post-link',
-		'title'         => esc_html__( 'Link Settings', 'fenchi' ),
-		'object_types'  => array( 'post' ), // Post type
-		'context'      => 'normal',
-		'priority'     => 'default',
-	) );
-	$cmb_link->add_field( array(
-		'name' => esc_html__( 'Link', 'fenchi' ),
-		'desc' => esc_html__( 'add your link', 'fenchi' ),
-		'id'   => $prefix . 'url',
-		'type' => 'text_url',
-	) );
 	// metabox for Quote post format
 	$cmb_quote = new_cmb2_box( array(
 		'id'           => 'metabox-post-quote',

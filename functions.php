@@ -96,7 +96,6 @@ if ( ! function_exists( 'fenchi_setup' ) ) :
 	 */
 		add_theme_support( 'post-formats', array(
 			'standard',
-			'aside',
 			'image',
 			'video',
 			'quote',
@@ -189,7 +188,7 @@ function fenchi_scripts() {
 	wp_enqueue_script( 'jquery-js' , get_template_directory_uri() . '/js/jquery-3.3.1.min.js', array(), '3.3.1', true );
 	wp_enqueue_script( 'popper' , get_template_directory_uri() . '/js/popper.min.js', array(), '2017', true );
 	wp_enqueue_script( 'bootstrap-js' , get_template_directory_uri() . '/js/bootstrap.min.js', array(), '4.1.1', true );
-	wp_enqueue_script( 'ekko-lightbox-js' , get_template_directory_uri() . '/js/ekko-lightbox.min.js', array(), '5.0.0', true );
+	wp_enqueue_script( 'ekko-lightbox-js' , get_template_directory_uri() . '/js/ekko-lightbox.min.js', array(), '5.0.0', true );	
 	wp_enqueue_script( 'custom-js' , get_template_directory_uri() . '/js/custom.js', array(), '2018', true );
 }
 add_action( 'wp_enqueue_scripts', 'fenchi_scripts' );
@@ -199,7 +198,7 @@ add_action( 'wp_enqueue_scripts', 'fenchi_scripts' );
  */
 function display_metabax_scripts() {
 	
-	wp_enqueue_script( 'display-metabox-js' , get_template_directory_uri() . '/js/metabox.js', array(), '1', true );
+	wp_enqueue_script( 'display-metabox-js' , get_template_directory_uri() . '/js/metabox.js');
 
 }
 add_action('admin_enqueue_scripts', 'display_metabax_scripts');
@@ -269,4 +268,3 @@ if ( class_exists( 'TGM_Plugin_Activation' ) ) {
 
  require get_template_directory() . '/inc/cmb2-metaboxes.php';
 }
-
