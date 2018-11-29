@@ -1,21 +1,16 @@
 === fenchi ===
 
 Contributors: automattic
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
-
-Requires at least: 4.5
-Tested up to: 4.8
-Stable tag: 1.0.0
-Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, right-sidebar, custom-background, full-width-template
 Requires at least: 4.0
-Tested up to: 4.7
-
+Tested up to: 4.3-alpha
+Stable tag: 1.0.0
+Tags: blog, custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
 License: GNU General Public License v2.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
-
 The best WordPress starter theme based on the most powerful frameworks in the world: "_s" (by Automattic, the main people behind WordPress development), Twitter Bootstrap (the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web) and Font Awesome (or Fontawesome, a full suite of 675+ pictographic icons for easy scalable vector graphics on websites).
+You can see demo of theme: [http://fenchgroup.com/]
 
 Page templates
 * Right-sidebar (default page template)
@@ -27,7 +22,15 @@ Other features:
 * Special About me Widget 
 * Special About Site and Contact in header (active from customizer)
 
-This theme will be an active project which we will update from time to time. Check this page regularly for the updates.
+== Frequently Asked Questions ==
+
+= A question that someone might have =
+
+An answer to that question.
+
+== Changelog ==
+= 1.0.0 =
+* Initial release
 
 == Installation ==
 
@@ -48,5 +51,5 @@ This theme will be an active project which we will update from time to time. Che
 * All images in demo are from http://pixabay.com 
 
 
-= 1.0 - Des 01, 2018 =
+= 1.0.0 - Des 01, 2018 =
 * Initial release
