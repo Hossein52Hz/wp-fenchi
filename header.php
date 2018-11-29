@@ -17,12 +17,6 @@
   <!-- Required meta tags -->
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!-- google font -->
-  <link href="https://fonts.googleapis.com/css?family=Alegreya:400italic,400,700,700italic&amp;subset=latin,latin-ext"
-    rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Alegreya+SC:400&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-
-
   <title><?php wp_title(); ?></title>
   <?php wp_head(); ?>
 </head>
