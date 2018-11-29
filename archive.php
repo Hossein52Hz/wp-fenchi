@@ -19,13 +19,16 @@ get_header();
 	<?php endif; ?>
 
 		<?php if ( have_posts() ) : ?>
-
-			<header class="page-header card mb-4 shadow-sm">
+			<div class="card mb-4 shadow-sm">
+				<div class="card-body">
+			<header class="page-header">
 				<?php
 				the_archive_title( '<h1 class="page-title"><i class="fas fa-tags"></i>', '</h1>' );
 				// the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->
+			</div>
+			</div>
 
 			<?php
 			/* Start the Loop */
