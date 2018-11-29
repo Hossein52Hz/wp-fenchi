@@ -191,7 +191,52 @@ body {
 
 /* end bootstrap nav */
 
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
 
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+.gallery-caption {
+	display: block;
+}
 
 /* home content */
 .all-posts {
@@ -553,7 +598,9 @@ video.wp-video-shortcode {
 
 /* comment */
 
-
+.bypostauthor {
+	display: block;
+}
 .cmt-btn {
     border: 1px solid rgba(0, 0, 0, .125);
     background-color: #fff;
@@ -631,8 +678,21 @@ video.wp-video-shortcode {
 .comment-metadata {
     float: right;
 }
-
-
+.comment-form [type=submit]{
+    background: #41d6c3;
+    border-color: #41d6c3;
+    color: #fff;
+    border: 2px solid #41d6c3;
+    padding: 10px 20px;
+    border-radius: 4px;
+}
+.comment-form-comment label{
+    float: left;
+    width: 100%;
+}
+.comment-form-url #url, .comment-form-email #email, .comment-form-author #author, .comment-form-comment #comment{
+    width: 100%;
+}
 
 /* .liksItem {
     border: 1px solid #ddd;
