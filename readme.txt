@@ -42,13 +42,15 @@ An answer to that question.
 6. Click Activate cmb2 plugin.
 
 == Credits ==
-* Main desing is based one of the Hugo Themes http://consequently.org by Greg Restall
+* Main desing is based one of the Hugo [GPLv2] Themes http://consequently.org by Greg Restall
+* metaboxes create by https://wordpress.org/plugins/cmb2/ [GPLv2]
 * Based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 * Bootstrap http://getbootstrap.com, (C) 2011-2015 Twitter, Inc., [MIT] (https://github.com/twbs/bootstrap/blob/master/LICENSE)
 * WP Bootstrap Navwalker https://github.com/wp-bootstrap/wp-bootstrap-navwalker, [GPLv3](https://www.gnu.org/licenses/gpl-3.0.en.html)
 * Font Awesome icons, Copyright (C) Dave Gandy License: SIL Open Font License, version 1.1. - http://fontawesome.io/
 * WP Bootstrap pagination https://gist.github.com/mtx-z/deedce0c751a23737b1438b0f65a87ea 
-* All images in demo are from http://pixabay.com 
+* All images in demo are from http://pixabay.com  free for every use
+
 
 
 = 1.0.0 - Des 01, 2018 =
