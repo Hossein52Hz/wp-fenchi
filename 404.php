@@ -1,24 +1,26 @@
 <?php
 /**
- * The template for displaying 404 pages (not found)
+ * The template for displaying all single posts
  *
- * @link https://codex.wordpress.org/Creating_an_Error_404_Page
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
  * @package fenchi
  */
 
 get_header();
 ?>
-
      <?php if ( is_active_sidebar( 'main-sidebar' ) ) : ?>
         <!-- content -->
-        <div class="col-md-8 all-posts">
+        <div class="col-md-8">
 	<?php else: ?>
  		<!-- content full-width -->
- 		<div class="col-md-12 all-posts">
+ 		<div class="col-md-12">
 	<?php endif; ?>
 
-			<section class="error-404 not-found">
+        
+          <div class="single-post">
+
+		<section class="error-404 not-found">
 			<div class="card mb-4 shadow-sm">
 			<div class="card-body">
 				<header class="page-header">
@@ -36,9 +38,12 @@ get_header();
 				</div><!-- .page-content -->
 				</div>
 			</section><!-- .error-404 -->
+
+		
 	</div>
-	
+	</div>
 
 <?php
 get_sidebar();
 get_footer();
+

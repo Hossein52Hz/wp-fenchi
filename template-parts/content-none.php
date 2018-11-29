@@ -53,3 +53,4 @@
 		</div>
 	</div><!-- .page-content -->
 </section><!-- .no-results -->
+	</div>
