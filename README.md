@@ -1,6 +1,8 @@
 wp-fenchi 
 ===
 
+![Screenshot](screenshot.jpg)
+
 A simple and beauty Wordpress blog theme based on _S (underscore).
 
 feutures:
