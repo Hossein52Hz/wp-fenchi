@@ -10,3 +10,4 @@ feutures:
 * Special About site widget
 * Social links
 
+Demo of this theme: [wp-fenchi](http://fenchgroup.com)
